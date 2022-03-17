@@ -8,7 +8,23 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 public class LijstMetExamens {
-    //zie voorbeeld code beneden.
+    public static void main(String[] args) throws FileNotFoundException {
+        JSONParser jsonParser = new JSONParser();
+        try(FileReader reader = new FileReader("src/main/resources/LijstMetExamens.json")){
+            Object object = jsonParser.parse(reader);
+            JSONArray examens = (JSONArray) object;
+            for(Object exam : examens){
+                parseExamObject((JSONObject) exam);
+            }
+        } catch (IOException | ParseException e) {
+            System.out.println(e);
+        }
+    }
+    public static void parseExamObject(JSONObject examen){
+        JSONObject examenObject = (JSONObject) examen.get("examen");
+        String naamExamen = (String) examenObject.get("naam");
+        System.out.println(naamExamen);
+    }
 }
 /*public class LijstMetExamens {
 
@@ -17,7 +33,9 @@ public class LijstMetExamens {
         try(FileReader reader = new FileReader("src/main/resources/LijstMetExamens.json")){
             Object object = jsonParser.parse(reader);
             JSONArray examens = (JSONArray) object;
-            examens.forEach(emp -> parseExamObject((JSONObject) emp));
+             for(Object exam : examens){
+                parseExamObject((JSONObject) exam);
+            }
         } catch (IOException | ParseException e) {
             System.out.println(e);
         }
