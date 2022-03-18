@@ -1,0 +1,14 @@
+[
+  {
+    "examen": {
+      "naam": "rekentoets",
+      "id": "1"
+    }
+  },
+  {
+    "examen": {
+      "naam": "topotoets",
+      "id": "2"
+    }
+  }
+]
