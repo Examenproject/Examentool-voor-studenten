@@ -3,5 +3,6 @@ public class Main {
         System.out.println("bruh!");
 
         System.out.println("bruh 2");
+        System.out.println("bruh3");
     }
 }
