@@ -1,8 +1,8 @@
 [
   {
-    "naam": "examens",
-    "id": 324,
-    "totaalVragen": 18,
+    "naam": "Reken Examen",
+    "id": 1,
+    "totaalVragen": 10,
     "vragen": [
       {
         "vraag": "Jesse wilt graag 64 watermeloenen kopen en deze met 8 vrienden delen. Hoeveel watermeloenen krijgt elke vriend?",
@@ -111,6 +111,109 @@
         "id": 18,
         "antwoord": "B. 0,16",
         "punten": 1
+      }
+    ]
+  },
+  {
+    "naam": "Topo Examen",
+    "id": 2,
+    "totaalVragen": 10,
+    "vragen": [
+      {
+        "id": 1,
+        "vraag": "Wat is de hoofdstad van Gelderland?",
+        "antwoord": "Arnhem",
+        "punten": 1
+      },
+      {
+        "id": 2,
+        "vraag": "Loopt de rivier de Rijn door Belgie\nJa\nNee",
+        "antwoord": "Nee",
+        "punten": 1
+      },
+      {
+        "id": 3,
+        "vraag": "Wat is de hoofdstad van Estland?",
+        "antwoord": "B",
+        "punten": 2
+      },
+      {
+        "id": 4,
+        "vraag": "Van welk land is Valetta de hoofdstad?",
+        "antwoord": "B",
+        "punten": 2
+      },
+      {
+        "id": 5,
+        "vraag": "Wat is de oudste continu bewoonde stad ter wereld?",
+        "antwoord": "Jericho in Palestina",
+        "punten": 3
+      },
+      {
+        "id": 6,
+        "vraag": "Wat is de hoofdstad van Ghana?",
+        "antwoord": "Accra",
+        "punten": 1
+      },
+      {
+        "id": 7,
+        "vraag": "Wat is de hoofdstad van Namibië?",
+        "antwoord": "D",
+        "punten": 2
+      },
+      {
+        "id": 8,
+        "vraag": "In welk land ligt het meest noordelijke punt van Afrika?",
+        "antwoord": "Tunesië",
+        "punten": 1
+      },
+      {
+        "id": 9,
+        "vraag": "Welke twee landen delen met een grens van bijna 9000km de langste landgrens?",
+        "antwoord": "Canada en Verenigde Staten",
+        "punten": 3
+      },
+      {
+        "id": 10,
+        "vraag": "Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?",
+        "antwoord": "Hoofdstad",
+        "punten": 2
+      },
+      {
+        "id": 11,
+        "vraag": "Hoe werd Thailand tot 1939 genoemd?",
+        "antwoord": "Siam",
+        "punten": 2
+      },
+      {
+        "id": 12,
+        "vraag": "Als je de continenten rangschikt van grootste naar kleinste oppervlakte. Welke van deze volgordes klopt dan?\nA. Azië, Afrika, Antarctica, Noord Amerika, Zuid-Amerika, Europa, Australië\nB Azië, Afrika, Zuid-Amerika, Noord Amerika, Antarctica, Australië, Europa\nC Azië, Afrika, Noord Amerika, Zuid-Amerika, Antarctica, Europa, AustraliëD Afrika, Azië, Zuid-Amerika, Antarctica, Noord Amerika,  Europa, Australië",
+        "antwoord": "C",
+        "punten": 2
+      },
+      {
+        "id": 13,
+        "vraag": "Zuid-Afrika is het enige land ter wereld met 3 hoofdsteden. Welke zijn dat?\nA. Pretoria, Kaapstad, Bloemfontein\nB. Johannesburg, Kaapstad, Bloemfontein\nC. Pretoria, Kaapstad, Johannesburg\nD. Mbombela, Kaapstad, Johannesburg",
+        "antwoord": "A",
+        "punten": 2
+      },
+      {
+        "id": 14,
+        "vraag": "'Ouagadougou' is de hoofdstad van Burkina Faso.\nJa\nNee",
+        "antwoord": "Ja",
+        "punten": 2
+      },
+      {
+        "id": 15,
+        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee",
+        "antwoord": "Ja",
+        "punten": 2
+      },
+      {
+        "id": 16,
+        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee",
+        "antwoord": "Ja",
+        "punten": 2
       }
     ]
   }
