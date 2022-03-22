@@ -1,7 +1,8 @@
 [
   {
     "naam": "Rekentoets",
-    "id": 1,
+    "id": 14532345,
+    "examenID": 1,
     "totaalVragen": 10,
     "vragen": [
       {
@@ -18,7 +19,8 @@
   },
   {
     "naam": "Topo Toets",
-    "id": 2,
+    "id": 26543241,
+    "examenID": 2,
     "totaalVragen": 10,
     "vragen": [
       {

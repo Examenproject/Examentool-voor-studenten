@@ -7,8 +7,10 @@
     "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
     "examens": [
-      1,
-      2
+      {
+        "examenID": 1,
+        "antwoordID": 14532345
+      }
     ]
   },
   {
@@ -19,32 +21,50 @@
     "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
     "examens": [
-      1234,
-      4322
+      {
+        "examenID": 1,
+        "antwoordID": 14532345
+      },
+      {
+        "examenID": 2,
+        "antwoordID": 26543241
+      }
     ]
   },
   {
     "naam": "Jan",
     "achternaam": "Jansen",
-    "nummer": 23456789,
+    "nummer": 34567890,
     "wachtwoord": "1234",
     "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
     "examens": [
-      1234,
-      4322
+      {
+        "examenID": 1,
+        "antwoordID": 14532345
+      },
+      {
+        "examenID": 2,
+        "antwoordID": 26543241
+      }
     ]
   },
   {
     "naam": "Joop",
     "achternaam": "de 2e",
-    "nummer": 23456789,
+    "nummer": 45678912,
     "wachtwoord": "1234",
     "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
     "examens": [
-      1234,
-      4322
+      {
+        "examenID": 1,
+        "antwoordID": 14532345
+      },
+      {
+        "examenID": 2,
+        "antwoordID": 26543241
+      }
     ]
   }
 ]
