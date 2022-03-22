@@ -77,7 +77,7 @@ class JSON {
         return null;
     }
 
-    public static ArrayList<Student> getStudenten(int examenId) {
+    /*public static ArrayList<Student> getStudenten(int examenId) {
         JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
         ArrayList<Student> lijstMetStudenten = new ArrayList<>(); //In deze lijst met studenten worden alle studenten toegevoegd die een bepaald examen hebben gemaakt.
 
@@ -90,6 +90,35 @@ class JSON {
                 int examenNummer = toInt(arrays.get(i));
                 if (examenNummer == examenId) { //Als het meegegeven examenId gelijk is aan een examenNummer in de array in de student, dan wordt deze student toegevoegd aan de ArrayList "lijstMetStudenten". Op deze manier krijg je in die ArrayList dus een overzicht van alle studenten die een bepaalde meegegeven toets hebben gemaakt.
                     lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens"))));
+                }
+            }
+        }
+        return lijstMetStudenten;
+    }*/
+    public static ArrayList<Student> getStudenten(int examenId) {
+        JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
+        ArrayList<Student> lijstMetStudenten = new ArrayList<>(); //In deze lijst met studenten worden alle studenten toegevoegd die een bepaald examen hebben gemaakt.
+        for (Object student : studenten) { //Gaat alle studenten langs.
+
+            JSONObject jsonObject = (JSONObject) student;
+            JSONArray arrays = (JSONArray) jsonObject.get("examens");
+            for (int i = 0; i < arrays.size(); i++) { // Gaat alle examen arrays per student af.
+                int examenNummer = toInt(arrays.get(i));
+                if (examenNummer == examenId) { // Controleert of de studenten een examen hebben gemaakt dat het meegegeven id matcht.
+                    JSONArray examenAntwoorden = readFile("examenAntwoorden");
+                    for (Object examenAntwoord : examenAntwoorden) { // Gaat alle examen antwoorden af
+                        JSONObject examenAntwoordObject = (JSONObject) examenAntwoord;
+                        if (toInt(examenAntwoordObject.get("uniekId")) == examenNummer) { // Als meegegeven ID gelijk is aan het unieke examen ID in examenAntwoorden.json, dan verder de code in.
+                            int numberToMatch = toInt(examenAntwoordObject.get("id"));
+                            JSONArray examens = readFile("examens");
+                            for (Object examen : examens) { // Gaat alle examens langs
+                                JSONObject examenObject = (JSONObject) examen;
+                                if (toInt(examenObject.get("id")) == numberToMatch) { // Als het id van een bepaald examen matcht met het eerder bepaalde nummer waarmee hij moet matchen, dan wordt er een student toegevoegd aan de ArrayList. Op deze manier krijg je dus een overzicht van alle leerlingen die die specifieke toets hebben gemaakt.
+                                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens"))));
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
