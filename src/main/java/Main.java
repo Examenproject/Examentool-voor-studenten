@@ -23,8 +23,9 @@ public class Main {
             System.out.println(jsonObject.get("naam"));
         }*/
         ArrayList<Student> lijstMetStudenten = JSON.getStudenten(1234);
-        String teken = "|";
+
         System.out.println("De volgende leerlingen hebben deze toets gemaakt : ");
+
         for (int i = 0; i < lijstMetStudenten.size(); i++) {
             System.out.print("Naam : ");
             System.out.print(lijstMetStudenten.get(i).getNaam());
@@ -33,11 +34,8 @@ public class Main {
             System.out.print(" | ");
             System.out.print("Studentnummer: ");
             System.out.print(lijstMetStudenten.get(i).getStudentNummer() + "\n");
-
-
         }
-        JSON.getStudent(12345678);
-        JSON.getExamen(1);
+
         ArrayList<Examen> lijstMetExamens = JSON.getExamens(12345678);
         System.out.println("De volgende examens zijn gemaakt door deze leerling: ");
         for(int i = 0; i<lijstMetExamens.size(); i++){
@@ -57,48 +55,63 @@ public class Main {
 }
 class JSON {
     public static int toInt(Object input){
-        return (int) (long) input; // Maakt van een Object uit een .json file een int.
+        try{
+            return (int) (long) input; // Maakt van een Object uit een .json file een int.
+        }catch(Exception e){
+            return 0;
+        }
     }
+
     public static JSONArray readFile(String path) { // Leest complete .json file uit en returned dit als een array.
         JSONParser jsonParser = new JSONParser();
+
         try (FileReader reader = new FileReader("src/main/resources/" + path + ".json")) {
             Object obj = jsonParser.parse(reader);
             JSONArray json = (JSONArray) obj;
+
             return json;
         } catch (Exception e) {
             System.out.println(e);
         }
+
         return null;
     }
 
     public static ArrayList<Student> getStudenten(int examenId) {
         JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
         ArrayList<Student> lijstMetStudenten = new ArrayList<>(); //In deze lijst met studenten worden alle studenten toegevoegd die een bepaald examen hebben gemaakt.
+
         for (Object student : studenten) { //Gaat alle studenten langs.
 
             JSONObject jsonObject = (JSONObject) student;
             JSONArray arrays = (JSONArray) jsonObject.get("examens");
+
             for (int i = 0; i < arrays.size(); i++) { // Gaat alle examen arrays per student af.
                 int examenNummer = toInt(arrays.get(i));
                 if (examenNummer == examenId) { //Als het meegegeven examenId gelijk is aan een examenNummer in de array in de student, dan wordt deze student toegevoegd aan de ArrayList "lijstMetStudenten". Op deze manier krijg je in die ArrayList dus een overzicht van alle studenten die een bepaalde meegegeven toets hebben gemaakt.
-
                     lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens"))));
                 }
             }
         }
         return lijstMetStudenten;
     }
+
     public static ArrayList<Examen> getExamens(int studentNummer){
         JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
         ArrayList<Examen> lijstMetExamens = new ArrayList<>();
+
         for(Object student : studenten){ // Gaat alle studenten langs.
             JSONObject studentObject = (JSONObject) student;
+
             int studentId = toInt(studentObject.get("nummer"));
+
             if(studentId == studentNummer){ //Als een megegeven studentNummer gelijk is aan een in de studenten file gevonden studentNummer dan gaat hij verder de code in.
                 JSONArray gemaakteExamens = (JSONArray) studentObject.get("examens");
                 JSONArray examens = readFile("examens");
+
                 for(Object examen : examens){ // Gaat alle examens af in de examens file.
                     JSONObject examenObject = (JSONObject) examen;
+
                     for(int i = 0; i<gemaakteExamens.size(); i++){ // Gaat alle examens af in die net gevonden student waarbij het studentnummer in de file gelijk is aan het meegegeven student nummer.
                         if(gemaakteExamens.get(i) == (examenObject.get("id"))){ // Als een examen van een student met het meegegeven studentnummer wordt teruggevonden in de examens file, dan wordt dit examen toegevoegd aan de ArrayList "lijstMetExamens". Op deze manier krijg je in die ArrayList dus een overzicht van alle examens die door een bepaalde student zijn gemaakt.
                             lijstMetExamens.add(new Examen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
@@ -177,6 +190,7 @@ class Student {
         return gehaaldeExamens;
     }
 }
+
 class Examen{
     private String naam;
     private int id;
