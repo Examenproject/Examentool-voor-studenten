@@ -140,7 +140,7 @@ class JSON {
                     for (int i = 0; i < gemaakteExamens.size(); i++) { // Gaat alle examens af in die net gevonden student waarbij het studentnummer in de file gelijk is aan het meegegeven student nummer.
                         JSONObject studentExamens = (JSONObject) gemaakteExamens.get(i);
 
-                        if (examenObject.get("id") == studentExamens.get("examenID")) {
+                        if (examenObject.get("id") == studentExamens.get("examenID")) { // Als een id van een examen in de examen.json file gelijk is aan het id van een examen onder student, dan wordt dit examen toegevoegd aan deze lijst.
                             lijstMetExamens.add(new Examen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
                         }
                     }
