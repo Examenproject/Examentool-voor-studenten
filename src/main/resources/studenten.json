@@ -1,0 +1,50 @@
+[
+  {
+    "naam": "Karel",
+    "achternaam": "van der Lelij",
+    "nummer": 12345678,
+    "wachtwoord": "1234",
+    "gehaaldeExamens": 2,
+    "gemiddelde": 6.9,
+    "examens": [
+      1,
+      2
+    ]
+  },
+  {
+    "naam": "Marcel",
+    "achternaam": "Ploeg",
+    "nummer": 23456789,
+    "wachtwoord": "1234",
+    "gehaaldeExamens": 2,
+    "gemiddelde": 6.9,
+    "examens": [
+      1234,
+      4322
+    ]
+  },
+  {
+    "naam": "Jan",
+    "achternaam": "Jansen",
+    "nummer": 23456789,
+    "wachtwoord": "1234",
+    "gehaaldeExamens": 2,
+    "gemiddelde": 6.9,
+    "examens": [
+      1234,
+      4322
+    ]
+  },
+  {
+    "naam": "Joop",
+    "achternaam": "de 2e",
+    "nummer": 23456789,
+    "wachtwoord": "1234",
+    "gehaaldeExamens": 2,
+    "gemiddelde": 6.9,
+    "examens": [
+      1234,
+      4322
+    ]
+  }
+]
