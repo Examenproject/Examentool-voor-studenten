@@ -1,69 +1,73 @@
 [
   {
-    "naam": "Karel",
     "achternaam": "van der Lelij",
+    "gemiddelde": 6.9,
+    "wachtwoord": "1234",
+    "naam": "Karel",
     "nummer": 12345678,
-    "wachtwoord": "1234",
     "gehaaldeExamens": 2,
-    "gemiddelde": 6.9,
     "examens": [
       {
-        "examenID": 1,
-        "antwoordID": 14532345
+        "antwoordID": 14532345,
+        "examenID": 1
+      },
+      {
+        "antwoordID": 26543241,
+        "examenID": 2
       }
     ]
   },
   {
-    "naam": "Marcel",
     "achternaam": "Ploeg",
+    "gemiddelde": 6.9,
+    "wachtwoord": "1234",
+    "naam": "Marcel",
     "nummer": 23456789,
-    "wachtwoord": "1234",
     "gehaaldeExamens": 2,
-    "gemiddelde": 6.9,
     "examens": [
       {
-        "examenID": 1,
-        "antwoordID": 14532345
+        "antwoordID": 14532345,
+        "examenID": 1
       },
       {
-        "examenID": 2,
-        "antwoordID": 26543241
+        "antwoordID": 26543241,
+        "examenID": 2
       }
     ]
   },
   {
-    "naam": "Jan",
     "achternaam": "Jansen",
-    "nummer": 34567890,
-    "wachtwoord": "1234",
-    "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
+    "wachtwoord": "1234",
+    "naam": "Jan",
+    "nummer": 34567890,
+    "gehaaldeExamens": 2,
     "examens": [
       {
-        "examenID": 1,
-        "antwoordID": 14532345
+        "antwoordID": 14532345,
+        "examenID": 1
       },
       {
-        "examenID": 2,
-        "antwoordID": 26543241
+        "antwoordID": 26543241,
+        "examenID": 2
       }
     ]
   },
   {
-    "naam": "Joop",
     "achternaam": "de 2e",
-    "nummer": 45678912,
-    "wachtwoord": "1234",
-    "gehaaldeExamens": 2,
     "gemiddelde": 6.9,
+    "wachtwoord": "1234",
+    "naam": "Joop",
+    "nummer": 45678912,
+    "gehaaldeExamens": 2,
     "examens": [
       {
-        "examenID": 1,
-        "antwoordID": 14532345
+        "antwoordID": 14532345,
+        "examenID": 1
       },
       {
-        "examenID": 2,
-        "antwoordID": 26543241
+        "antwoordID": 26543241,
+        "examenID": 2
       }
     ]
   }

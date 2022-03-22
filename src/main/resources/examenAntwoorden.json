@@ -3,16 +3,22 @@
     "naam": "Rekentoets",
     "id": 14532345,
     "examenID": 1,
+    "studentNummer": 12345678,
+    "poging": 1,
+    "date": "17-3-2022 15:06:38",
     "totaalVragen": 10,
+    "geslaagd": false,
     "vragen": [
       {
         "vraag": "wat is 1 + 1?\na. 2\nb. 3",
         "antwoord": 2,
+        "studentAntwoord":  2,
         "punten": 1
       },
       {
         "vraag": "wat is 1 + 1?",
         "antwoord": 2,
+        "studentAntwoord":  2,
         "punten": 2
       }
     ]
@@ -20,17 +26,23 @@
   {
     "naam": "Topo Toets",
     "id": 26543241,
+    "studentNummer": 12345678,
+    "poging": 1,
+    "date": "17-3-2022 15:06:38",
     "examenID": 2,
     "totaalVragen": 10,
+    "geslaagd": false,
     "vragen": [
       {
         "vraag": "wat is 1 + 1?",
         "antwoord": 2,
+        "studentAntwoord":  2,
         "punten": 1
       },
       {
         "vraag": "wat is 1 + 1?",
         "antwoord": 2,
+        "studentAntwoord":  2,
         "punten": 2
       }
     ]

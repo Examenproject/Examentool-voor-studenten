@@ -7,10 +7,10 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,18 +37,34 @@ public class Main {
 //            System.out.print(lijstMetStudenten.get(i).getStudentNummer() + "\n");
 //        }
 
-        ArrayList<Examen> lijstMetExamens = JSON.getExamens(12345678);
-        System.out.println("De volgende examens zijn gemaakt door deze leerling: ");
-        for (int i = 0; i < lijstMetExamens.size(); i++) {
-            System.out.print("Naam : ");
-            System.out.print(lijstMetExamens.get(i).getNaam());
-            System.out.print(" | ");
-            System.out.print("Id: ");
-            System.out.print(lijstMetExamens.get(i).getId());
-            System.out.print(" | ");
-            System.out.print("Totaal aantal vragen: ");
-            System.out.print(lijstMetExamens.get(i).getTotaalVragen() + "\n");
-        }
+//        ArrayList<Examen> lijstMetExamens = JSON.getExamens(12345678);
+//        System.out.println("De volgende examens zijn gemaakt door deze leerling: ");
+//        for (int i = 0; i < lijstMetExamens.size(); i++) {
+//            System.out.print("Naam : ");
+//            System.out.print(lijstMetExamens.get(i).getNaam());
+//            System.out.print(" | ");
+//            System.out.print("Id: ");
+//            System.out.print(lijstMetExamens.get(i).getId());
+//            System.out.print(" | ");
+//            System.out.print("Totaal aantal vragen: ");
+//            System.out.print(lijstMetExamens.get(i).getTotaalVragen() + "\n");
+//        }
+//        JSON.addStudent("Sidd", "G", "bruh1234");
+//        JSON.removeStudent(202251082);
+        
+
+        
+//        JSONArray vragen = new JSONArray();
+//
+//        JSONObject vraag = new JSONObject();
+//        vraag.put("vraag", "wat is 1 + 1?\na. 2\nb. 3");
+//        vraag.put("antwoord", 2);
+//        vraag.put("studentAntwoord", 2);
+//        vraag.put("punten", 2);
+//
+//        vragen.add(vraag);
+//
+//        JSON.saveGemaaktExamen(1, 12345678, vragen);
     }
 
 
@@ -75,6 +91,16 @@ class JSON {
             System.out.println(e);
         }
         return null;
+    }
+
+    public static void writeJSON(JSONArray writeContent, String jsonFileName){
+        //write to the json file
+        try (FileWriter file = new FileWriter("src/main/resources/" + jsonFileName + ".json")) {
+            file.write(writeContent.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static ArrayList<Student> getStudenten(int examenId) {
@@ -161,5 +187,86 @@ class JSON {
             }
         }
         return null;
+    }
+
+    public static void addStudent(String name, String achternaam, String wachtwoord) {
+        //generate a random number that will be assigned to the student
+        Random rnd = new Random();
+        int number = Integer.parseInt(String.format("2022%04d", rnd.nextInt(99999)));
+
+        //read the whole student file
+        JSONArray studenten = JSON.readFile("studenten");
+
+        //create a new student json object
+        JSONObject newStudent = new JSONObject();
+        newStudent.put("naam", name);
+        newStudent.put("achternaam", achternaam);
+        newStudent.put("nummer", number);
+        newStudent.put("wachtwoord", wachtwoord);
+        newStudent.put("gehaaldeExamens", 0);
+        newStudent.put("gemiddelde", 0.0);
+        newStudent.put("examens", new JSONArray());
+
+        //add the newly created json object to the whole list of students
+        studenten.add(newStudent);
+
+        writeJSON(studenten, "studenten");
+    }
+
+    public static void removeStudent(int studentNummer) {
+        //read the whole student file
+        JSONArray studenten = JSON.readFile("studenten");
+
+        JSONArray newStudentList = new JSONArray();
+
+        //loop trough every student in the students json file
+        for(Object studentObject: studenten){
+            //create an json object
+            JSONObject student = (JSONObject) studentObject;
+
+            //check if the studentJSON number is not equal to the input number
+            if(toInt(student.get("nummer")) != studentNummer){
+                newStudentList.add(student);
+            }
+        }
+
+        writeJSON(newStudentList, "studenten");
+    }
+
+    public static void saveGemaaktExamen(int examenID, int studentNummer, JSONArray examenVragen){
+
+
+        //generate a random number that will be assigned to the students answers
+        Random rnd = new Random();
+        int number = Integer.parseInt(String.format("%08d", rnd.nextInt(99999999)));
+
+        //read the whole examenAntwoorden file
+        JSONArray examenAntwoorden = JSON.readFile("examenAntwoorden");
+
+        //get the exam with its id
+        JSONObject gemaakteExamen =  getExamen(examenID);
+
+        //get the current date so we can use it in our json object
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+
+        //create a new examAnswers json object
+        JSONObject newExamen = new JSONObject();
+        newExamen.put("naam", gemaakteExamen.get("naam"));
+        newExamen.put("id", number);
+        newExamen.put("studentenNummer", studentNummer);
+        //newExamen.put("poging", gemaakteExamen.get(0));
+        newExamen.put("date", formatter.format(date));
+        newExamen.put("examenID", examenID);
+        newExamen.put("totaalVragen", gemaakteExamen.get("totaalVragen"));
+        newExamen.put("geslaagd", false);
+        newExamen.put("vragen", examenVragen);
+
+
+        //add the newly created json object to the whole list of exam answers
+        examenAntwoorden.add(newExamen);
+
+        //save the new json file
+        writeJSON(examenAntwoorden, "examenAntwoorden");
     }
 }
