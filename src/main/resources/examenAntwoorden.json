@@ -7,7 +7,7 @@
     "poging": 1,
     "date": "17-3-2022 15:06:38",
     "totaalVragen": 10,
-    "geslaagd": false,
+    "cijfer": 5.5,
     "vragen": [
       {
         "vraag": "wat is 1 + 1?\na. 2\nb. 3",
@@ -31,7 +31,7 @@
     "date": "17-3-2022 15:06:38",
     "examenID": 2,
     "totaalVragen": 10,
-    "geslaagd": false,
+    "cijfer": 1.0,
     "vragen": [
       {
         "vraag": "wat is 1 + 1?",

@@ -55,19 +55,19 @@
   },
   {
     "achternaam": "de 2e",
-    "gemiddelde": 6.9,
+    "gemiddelde": 3.25,
     "wachtwoord": "1234",
     "naam": "Joop",
     "nummer": 45678912,
-    "gehaaldeExamens": 2,
+    "gehaaldeExamens": 1,
     "examens": [
-      {
-        "antwoordID": 14532345,
-        "examenID": 1
-      },
       {
         "antwoordID": 26543241,
         "examenID": 2
+      },
+      {
+        "antwoordID": 14532345,
+        "examenID": 1
       }
     ]
   }

@@ -56,6 +56,7 @@ public class Main {
         
 //        JSONArray vragen = new JSONArray();
 //
+//        //per for loop
 //        JSONObject vraag = new JSONObject();
 //        vraag.put("vraag", "wat is 1 + 1?\na. 2\nb. 3");
 //        vraag.put("antwoord", 2);
@@ -64,7 +65,11 @@ public class Main {
 //
 //        vragen.add(vraag);
 //
+//        //buiten for loop
 //        JSON.saveGemaaktExamen(1, 12345678, vragen);
+
+
+        JSON.updateStudent(45678912, 14532345, 1);
     }
 
 
@@ -75,6 +80,7 @@ class JSON {
         try {
             return (int) (long) input; // Maakt van een Object uit een .json file een int.
         } catch (Exception e) {
+            System.out.println(e);
             return 0;
         }
     }
@@ -233,7 +239,7 @@ class JSON {
         writeJSON(newStudentList, "studenten");
     }
 
-    public static void saveGemaaktExamen(int examenID, int studentNummer, JSONArray examenVragen){
+    public static int saveGemaaktExamen(int examenID, int studentNummer, JSONArray examenVragen){
 
 
         //generate a random number that will be assigned to the students answers
@@ -255,12 +261,15 @@ class JSON {
         newExamen.put("naam", gemaakteExamen.get("naam"));
         newExamen.put("id", number);
         newExamen.put("studentenNummer", studentNummer);
-        //newExamen.put("poging", gemaakteExamen.get(0));
         newExamen.put("date", formatter.format(date));
         newExamen.put("examenID", examenID);
         newExamen.put("totaalVragen", gemaakteExamen.get("totaalVragen"));
-        newExamen.put("geslaagd", false);
         newExamen.put("vragen", examenVragen);
+
+
+        //EDIT THIS
+        newExamen.put("poging", gemaakteExamen.get(0));
+        newExamen.put("cijfer", 6.9);
 
 
         //add the newly created json object to the whole list of exam answers
@@ -268,5 +277,59 @@ class JSON {
 
         //save the new json file
         writeJSON(examenAntwoorden, "examenAntwoorden");
+
+        return number;
+    }
+
+    public static void updateStudent(int studenNummer, Integer antwoordenID, Integer examenID){
+        JSONArray studenten = readFile("studenten");
+
+        JSONObject student = null;
+
+        //find the student object
+        for(Object studentObject: studenten){
+            JSONObject tempStudent = (JSONObject) studentObject;
+
+            if(toInt(tempStudent.get("nummer")) == studenNummer){
+                student =  tempStudent;
+            }
+        }
+
+        if(student == null){
+            return;
+        }
+
+        //found student
+        JSONArray examens = (JSONArray) student.get("examens");
+
+        JSONObject newExamen = new JSONObject();
+        newExamen.put("antwoordID", antwoordenID);
+        newExamen.put("examenID", examenID);
+        examens.add(newExamen);
+
+
+        int voldoendeCounter = 0;
+        double total = 0.0;
+        int count = 0;
+
+        for(Object examenObject: examens){
+            JSONObject examen = (JSONObject) examenObject;
+
+            int num = Integer.parseInt(examen.get("antwoordID").toString());
+
+            JSONObject examenAntwoordObject = getExamenAntwoorden(num);
+
+            total += (double) examenAntwoordObject.get("cijfer");
+            count++;
+
+            if((double) (examenAntwoordObject.get("cijfer")) >= 5.5){
+                voldoendeCounter++;
+            }
+        }
+
+        student.put("gehaaldeExamens", voldoendeCounter);
+        student.put("gemiddelde", total / count);
+
+        writeJSON(studenten, "studenten");
     }
 }

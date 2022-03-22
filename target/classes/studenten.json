@@ -55,16 +55,12 @@
   },
   {
     "achternaam": "de 2e",
-    "gemiddelde": 6.9,
+    "gemiddelde": 0.0,
     "wachtwoord": "1234",
     "naam": "Joop",
     "nummer": 45678912,
-    "gehaaldeExamens": 2,
+    "gehaaldeExamens": 0,
     "examens": [
-      {
-        "antwoordID": 14532345,
-        "examenID": 1
-      },
       {
         "antwoordID": 26543241,
         "examenID": 2
