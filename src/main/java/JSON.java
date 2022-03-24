@@ -37,8 +37,8 @@ public class JSON {
         return null;
     }
 
-    //Write to the json file
-    public static void writeJSON(JSONArray writeContent, String jsonFileName) {
+    //Write to the json file, this is private because this will only be used within this class.
+    private static void writeJSON(JSONArray writeContent, String jsonFileName) {
         try (FileWriter file = new FileWriter("src/main/resources/" + jsonFileName + ".json")) {
             file.write(writeContent.toJSONString());
             file.flush();
