@@ -9,8 +9,7 @@ public class Examen {
     private int totaalVragen;
     private ArrayList<Vraag> vragen;
 
-    public Examen(String naam, int examenId){
-        this.naam = naam;
+    public Examen(int examenId){
         this.examenId = examenId;
         getData();
     }
@@ -18,8 +17,20 @@ public class Examen {
     private void getData(){
         JSONObject examenObject = JSON.getExamen(examenId);
         this.totaalVragen = JSON.toInt(examenObject.get("totaalVragen"));
-        vragen = (JSONArray) examenObject.get("vragen");
+        this.naam = examenObject.get("naam").toString();
+
+        JSONArray vragenJsonArray = (JSONArray) examenObject.get("vragen");
         //vraag alle data op en generate een vragen array.
         //pass null naar studentAntwoord
+
+        for(Object vraagJson: vragenJsonArray){
+            JSONObject vraagObject = (JSONObject) vraagJson;
+
+            String vraag = vraagObject.get("vraag").toString();
+            String antwoord = vraagObject.get("antwoord").toString();
+            int punten = JSON.toInt(vraagObject.get("punten"));
+
+            vragen.add(new Vraag(vraag, antwoord, null, punten));
+        }
     }
 }
