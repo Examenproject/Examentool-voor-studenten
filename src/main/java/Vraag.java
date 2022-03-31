@@ -4,7 +4,7 @@ public class Vraag {
     private String studentAntwoord;
     private int punten;
 
-    Vraag(String vraag, String antwoord, int punten){
+    Vraag(String vraag, String antwoord, String studentAntwoord, int punten){
         
     }
 }

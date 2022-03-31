@@ -17,6 +17,5 @@ public class Main {
 
         //vragen om input en het proces starten
 
-        Printer.Inloggen();
     }
 }

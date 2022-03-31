@@ -70,7 +70,7 @@ public class JSON {
                 // Op deze manier krijg je in die ArrayList dus een overzicht van alle studenten die een bepaalde meegegeven toets hebben gemaakt.
                 if (examenNummer == examenId && !isToegevoegd) {
                     isToegevoegd = true;
-                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens"))));
+                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer")))));
                 }
             }
         }
@@ -78,7 +78,7 @@ public class JSON {
     }
 
     //returned alle gemaakte examens door een student. Geef als input het studentnummer uit de file studenten.json
-    public static ArrayList<GemaaktExamen> getExamens(int studentNummer) {
+    public static ArrayList<GemaaktExamen> getGemaakteExamens(int studentNummer) {
         JSONArray studenten = readFile("studenten");
         ArrayList<GemaaktExamen> lijstMetExamens = new ArrayList<>();
 
@@ -98,7 +98,7 @@ public class JSON {
                     //get examen Object met het unieke ID
                     JSONObject examenObject = getExamen(toInt(gemaakteExamen.get("examenID")));
 
-                    lijstMetExamens.add(new GemaaktExamen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
+                    lijstMetExamens.add(new GemaaktExamen(toInt(examenObject.get("id"))));
                 }
             }
         }
@@ -106,7 +106,7 @@ public class JSON {
     }
 
     //return data van een student met het studentnummer
-    public static JSONObject getStudent(int studentNummer) {
+    public static Student getStudent(int studentNummer) {
         JSONArray studenten = readFile("studenten");
 
         for (Object student : studenten) { // Gaat alle studenten in de studenten file langs.
@@ -114,7 +114,7 @@ public class JSON {
             int studentId = toInt(jsonObject.get("nummer"));
 
             if (studentId == studentNummer) { // Als je meegegeven studentNummer gelijk is aan een in de file gevonden studentnummer dan geeft hij dat object terug. Dat is tenslotte de student naar wie je zoekt. Je krijgt alle eigenschappen van die student terug.
-                return jsonObject;
+                return new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")),toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer"))));
             }
         }
         return null;
@@ -126,6 +126,7 @@ public class JSON {
         for (Object examen : examens) {
             JSONObject jsonObject = (JSONObject) examen;
             int examenNummer = toInt(jsonObject.get("id"));
+
             if (examenNummer == examenId) {
                 return jsonObject;
             }

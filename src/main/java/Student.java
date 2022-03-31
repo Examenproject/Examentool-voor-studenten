@@ -8,11 +8,12 @@ public class Student {
     private int gehaaldeExamens;
     public ArrayList<GemaaktExamen> examens = new ArrayList<>();
 
-    Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens) {
+    Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens, ArrayList<GemaaktExamen> examens) {
         this.naam = naam;
         this.achterNaam = achterNaam;
         this.studentNummer = studentNummer;
         this.gehaaldeExamens = gehaaldeExamens;
+        this.examens = examens;
     }
 
     public String getAchterNaam() {

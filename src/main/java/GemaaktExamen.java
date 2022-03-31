@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class GemaaktExamen {
     private String examenNaam;
+    private int uniekExamenId;
     private int id;
     private int totaalVragen;
     private int poging;
@@ -9,13 +11,17 @@ public class GemaaktExamen {
     private double cijfer;
     private int studentNummer;
     private boolean geslaagd;
+    private ArrayList<Vraag> vragen;
 
 
 
-    GemaaktExamen(String examenNaam, int id, int totaalVragen) {
-        this.examenNaam = examenNaam;
-        this.totaalVragen = totaalVragen;
-        this.id = id;
+    GemaaktExamen(int uniekExamenId) {
+        this.uniekExamenId = uniekExamenId;
+        getData();
+    }
+
+    private void getData(){
+        //geen null geven als studentAntwoord
     }
 
     public String getExamenNaam() {
