@@ -1,3 +1,6 @@
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import java.util.ArrayList;
 
 public class Examen {
@@ -13,6 +16,9 @@ public class Examen {
     }
 
     private void getData(){
+        JSONObject examenObject = JSON.getExamen(examenId);
+        this.totaalVragen = JSON.toInt(examenObject.get("totaalVragen"));
+        vragen = (JSONArray) examenObject.get("vragen");
         //vraag alle data op en generate een vragen array.
         //pass null naar studentAntwoord
     }
