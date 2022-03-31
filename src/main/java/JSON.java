@@ -78,9 +78,9 @@ public class JSON {
     }
 
     //returned alle gemaakte examens door een student. Geef als input het studentnummer uit de file studenten.json
-    public static ArrayList<Examen> getExamens(int studentNummer) {
+    public static ArrayList<GemaaktExamen> getExamens(int studentNummer) {
         JSONArray studenten = readFile("studenten");
-        ArrayList<Examen> lijstMetExamens = new ArrayList<>();
+        ArrayList<GemaaktExamen> lijstMetExamens = new ArrayList<>();
 
         for (Object student : studenten) {
             JSONObject studentObject = (JSONObject) student;
@@ -98,7 +98,7 @@ public class JSON {
                     //get examen Object met het unieke ID
                     JSONObject examenObject = getExamen(toInt(gemaakteExamen.get("examenID")));
 
-                    lijstMetExamens.add(new Examen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
+                    lijstMetExamens.add(new GemaaktExamen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
                 }
             }
         }
