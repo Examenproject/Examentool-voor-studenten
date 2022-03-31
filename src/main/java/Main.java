@@ -18,5 +18,13 @@ public class Main {
         //vragen om input en het proces starten
 
         Printer.Inloggen();
+        Printer.Registreren();
+        Printer.BesteStudent();
+        Printer.Examenlijst();
+        Printer.Gehaald();
+        Printer.Hoofdmenu();
+        Printer.Studentenlijst();
+        Printer.Uitschrijven();
+        Printer.Vraag();
     }
 }
