@@ -14,7 +14,7 @@ public class GemaaktExamen {
     private double cijfer;
     private int studentNummer;
     private boolean geslaagd;
-    private ArrayList<Vraag> vragen;
+    private ArrayList<Vraag> vragen = new ArrayList<>();
 
     GemaaktExamen(int uniekGemaaktExamenId) {
         this.id = uniekGemaaktExamenId;

@@ -140,7 +140,7 @@ public class JSON {
 
         for (Object examenAntwoord : examenAntwoorden) {
             JSONObject jsonObject = (JSONObject) examenAntwoord;
-            int id = toInt(jsonObject.get("id"));
+            int id = toInt(jsonObject.get("examenID"));
 
             if (id == uniekId) {
                 return jsonObject;
