@@ -327,7 +327,7 @@ public class JSON {
         return false;
     }
 
-    public ArrayList<Examen> getExamList() {
+    public static ArrayList<Examen> getExamList() {
         JSONArray examens = readFile("examens");
 
         ArrayList<Examen> returnArray = new ArrayList<>();
@@ -341,7 +341,7 @@ public class JSON {
         return returnArray;
     }
 
-    public ArrayList<Student> getStudentList() {
+    public  static ArrayList<Student> getStudentList() {
         JSONArray studenten = readFile("studenten");
 
         ArrayList<Student> returnArray = new ArrayList<>();

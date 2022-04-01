@@ -15,9 +15,12 @@ public class Main {
         //Interface laten zien
 
         //vragen om input en het proces starten
-        Printer.Inloggen();
+        //Printer.Inloggen();
+        //Scanner scanner = new Scanner(System.in);
+        //String input = scanner.nextLine();
+        //Printer.Examenlijst();
 
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        Printer.Examenlijst();
+        Printer.Studentenlijst();
     }
 }
