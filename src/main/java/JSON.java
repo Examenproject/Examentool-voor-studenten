@@ -215,7 +215,7 @@ public class JSON {
         writeJSON(newExamenAntwoordenList, "examenAntwoorden");
     }
 
-    public static int saveGemaaktExamen(int examenID, int studentNummer, JSONArray examenVragen) {
+    public static int saveGemaaktExamen(int examenID, int studentNummer, ArrayList<Vraag> vragen) {
         //generate a random number that will be assigned to the students answers
         Random rnd = new Random();
         int number = Integer.parseInt(String.format("%08d", rnd.nextInt(99999999)));
@@ -229,6 +229,20 @@ public class JSON {
         //get the current date so we can use it in our json object
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();
+
+        //generate JSON Arrayy with all the questions
+
+        JSONArray examenVragen = new JSONArray();
+
+        for(Vraag vraag: vragen){
+            JSONObject vraagObject = new JSONObject();
+            vraagObject.put("vraag", vraag.getVraag());
+            vraagObject.put("antwoord", vraag.getAntwoord());
+            vraagObject.put("studentAntwoord", vraag.getStudentAntwoord());
+            vraagObject.put("punten", vraag.getPunten());
+
+            examenVragen.add(vraagObject);
+        }
 
         //create a new examAnswers json object
         JSONObject newExamen = new JSONObject();
