@@ -34,7 +34,19 @@ public class Examen {
         }
     }
 
-    public String getName(){
+    public String getNaam(){
         return this.naam;
+    }
+
+    public ArrayList<Vraag> getVragen() {
+        return vragen;
+    }
+
+    public int getTotaalVragen() {
+        return totaalVragen;
+    }
+
+    public int getExamenId() {
+        return examenId;
     }
 }

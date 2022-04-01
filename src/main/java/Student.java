@@ -31,4 +31,8 @@ public class Student {
     public int getGehaaldeExamens() {
         return gehaaldeExamens;
     }
+
+    public ArrayList<GemaaktExamen> getExamens() {
+        return examens;
+    }
 }

@@ -10,4 +10,20 @@ public class Vraag {
         this.antwoord = antwoord;
         this.punten = punten;
     }
+
+    public String getAntwoord() {
+        return antwoord;
+    }
+
+    public String getVraag() {
+        return vraag;
+    }
+
+    public int getPunten() {
+        return punten;
+    }
+
+    public String getStudentAntwoord() {
+        return studentAntwoord;
+    }
 }

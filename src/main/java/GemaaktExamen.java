@@ -65,4 +65,32 @@ public class GemaaktExamen {
     public int getTotaalVragen() {
         return totaalVragen;
     }
+
+    public ArrayList<Vraag> getVragen() {
+        return vragen;
+    }
+
+    public double getCijfer() {
+        return cijfer;
+    }
+
+    public int getPoging() {
+        return poging;
+    }
+
+    public int getStudentNummer() {
+        return studentNummer;
+    }
+
+    public int getUniekExamenId() {
+        return uniekExamenId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public boolean isGeslaagd() {
+        return geslaagd;
+    }
 }
