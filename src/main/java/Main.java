@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static Student student;
@@ -14,5 +16,8 @@ public class Main {
 
         //vragen om input en het proces starten
         Printer.Inloggen();
+
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
     }
 }

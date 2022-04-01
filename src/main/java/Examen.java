@@ -33,4 +33,8 @@ public class Examen {
             vragen.add(new Vraag(vraag, antwoord, null, punten));
         }
     }
+
+    public String getName(){
+        return this.naam;
+    }
 }
