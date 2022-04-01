@@ -7,7 +7,7 @@ public class Examen {
     private String naam;
     private int examenId;// dit is de unieke id uit examens.json
     private int totaalVragen;
-    private ArrayList<Vraag> vragen;
+    private ArrayList<Vraag> vragen = new ArrayList<>();
 
     public Examen(int examenId){
         this.examenId = examenId;
