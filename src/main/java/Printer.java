@@ -53,18 +53,22 @@ public class Printer {
     }
 
     public static void Examenlijst() {
-        System.out.printf("=================================\n" +
-                "Examenlijst: \n" +
-                "\n" +
-                "%s\n" +
-                "\n" +
-                "=================================", JSON.getExamList());
+        System.out.printf("=================================\n"+"Examenlijst: \n"+"\n");
+        for (int  i = 0;  i < JSON.getExamList().size();  i++) {
+            String examen = JSON.getExamList().get(i).getNaam();
+            System.out.printf("%s\n", examen);
+        }
     }
 
     public static void Studentenlijst() {
-        System.out.printf("=================================\n" +
-                "  Naam:      Studentennummer:\n", JSON.getStudentList());
-
+        String naam;
+        int studentennummer;
+        System.out.printf("=================================\n");
+        for (int  i = 0;  i < JSON.getStudentList().size();  i++) {
+            naam = JSON.getStudentList().get(i).getNaam();
+            studentennummer = JSON.getStudentList().get(i).getStudentNummer();
+            System.out.printf("Naam:%s\nStudentennummer:%d\n\n",naam ,studentennummer);
+        }
     }
 
     public static void BesteStudent() {
@@ -86,8 +90,7 @@ public class Printer {
                 "      `.  * * *  .'\n" +
                 "        `-.....-'\n" +
                 "=================================\n" +
-                "Naam:      Studentennummer:     Percentage:\n" )//JSON.getExamList()
-                ;
+                "Naam:      Studentennummer:     Percentage:\n");
     }
 
     public static void Uitschrijven() {
