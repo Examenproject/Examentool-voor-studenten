@@ -53,6 +53,21 @@ public class GemaaktExamen {
             vragen.add(new Vraag(vraag, antwoord, studentAntwoord, punten));
         }
     }
+    public void examenInzien(){
+        ArrayList<GemaaktExamen> examens = JSON.getGemaakteExamens(this.studentNummer);
+        for(GemaaktExamen examen : examens){
+            if(examen.getId() == id){
+                ArrayList<Vraag> vragen = examen.getVragen();
+                for(Vraag vraag : vragen){
+                    System.out.println("=================================");
+                    System.out.println("Vraag : " + vraag.getVraag());
+                    System.out.println("Antwoord : " + vraag.getAntwoord());
+                    System.out.println("Gegeven antwoord : " + vraag.getStudentAntwoord());
+                    System.out.println("=================================");
+                }
+            }
+        }
+    }
 
     public String getExamenNaam() {
         return examenNaam;

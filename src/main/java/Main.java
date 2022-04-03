@@ -22,5 +22,7 @@ public class Main {
 
         Printer.Examenlijst();
         Printer.Studentenlijst();
+        /*GemaaktExamen gemaaktExamen = JSON.getGemaakteExamens(12345678).get(0);
+        gemaaktExamen.examenInzien();*/
     }
 }
