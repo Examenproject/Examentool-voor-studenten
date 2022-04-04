@@ -11,8 +11,8 @@ public class Vraag {
         this.punten = punten;
     }
 
-    public void setAntwoord(String userInput){
-        this.antwoord = userInput;
+    public void setStudentAntwoord(String userInput){
+        this.studentAntwoord = userInput;
     }
 
     public String getAntwoord() {
