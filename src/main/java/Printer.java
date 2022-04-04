@@ -22,9 +22,7 @@ public class Printer {
     public static void Registreren() {
         System.out.println("=================================\n" +
                 "\n" +
-                "Geef uw studentennummer en daarna het wachtwoord wat u wilt gebruiken\n" +
-                "\n" +
-                "- *Het studentennummer is minimaal \uD835\uDFF4 cijfers lang en is uniek*\n" +
+                "Geef uw naam, achternaam en daarna het wachtwoord wat u wilt gebruiken. Druk op Enter na het invoeren van elke waarde.\n" +
                 "\n" +
                 "=================================");
     }

@@ -326,7 +326,7 @@ public class JSON {
     }
 
 
-    public boolean studentLogin(int studentNummer, String wachtwoord) {
+    public static boolean studentLogin(int studentNummer, String wachtwoord) {
         JSONArray studenten = readFile("studenten");
 
 
