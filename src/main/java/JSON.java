@@ -367,4 +367,16 @@ public class JSON {
         }
         return returnArray;
     }
+    public static Examen getExamenObject(int examenId) {
+        JSONArray examens = readFile("examens");
+        for (Object examen : examens) {
+            JSONObject jsonObject = (JSONObject) examen;
+            int examenNummer = toInt(jsonObject.get("id"));
+
+            if (examenNummer == examenId) {
+                return new Examen(examenId);
+            }
+        }
+        return null;
+    }
 }
