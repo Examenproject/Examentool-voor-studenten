@@ -96,9 +96,9 @@ public class JSON {
                     JSONObject gemaakteExamen = (JSONObject) (gemaakteExamenObject);
 
                     //get examen Object met het unieke ID
-                    JSONObject examenObject = getExamen(toInt(gemaakteExamen.get("examenID")));
+                    //JSONObject examenObject = getExamen(toInt(gemaakteExamen.get("examenID")));
 
-                    lijstMetExamens.add(new GemaaktExamen(toInt(examenObject.get("id"))));
+                    lijstMetExamens.add(new GemaaktExamen(toInt(gemaakteExamen.get("antwoordID"))));
                 }
             }
         }
@@ -140,7 +140,7 @@ public class JSON {
 
         for (Object examenAntwoord : examenAntwoorden) {
             JSONObject jsonObject = (JSONObject) examenAntwoord;
-            int id = toInt(jsonObject.get("examenID"));
+            int id = toInt(jsonObject.get("id"));
 
             if (id == uniekId) {
                 return jsonObject;
