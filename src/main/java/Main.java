@@ -83,6 +83,10 @@ public class Main {
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
 
+            } else if (invoer == 5) {
+                //lijst met beste studenten
+            } else if (invoer == 6){
+                //uitschrijven student
             }
         }
     }
