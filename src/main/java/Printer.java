@@ -109,10 +109,13 @@ public class Printer {
     }
 
     public static void Gehaald(Boolean gehaald, int cijfer) {
+        String gehaaldTekst;
+        if (gehaald) {
+            gehaaldTekst = "wel";
+        } else {
+            gehaaldTekst = "niet";
+        }
         System.out.printf("=================================\n" +
-                "examen %s gehaald met een  %d\n" +
-                "1. exit", gehaald, cijfer);
+                "examen %s gehaald met een  %d\n" + "1. exit", gehaaldTekst, cijfer);
     }
-
-
 }
