@@ -2,6 +2,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Examen {
     private String naam;
@@ -9,12 +10,12 @@ public class Examen {
     private int totaalVragen;
     private ArrayList<Vraag> vragen = new ArrayList<>();
 
-    public Examen(int examenId){
+    public Examen(int examenId) {
         this.examenId = examenId;
         getData();
     }
 
-    private void getData(){
+    private void getData() {
         JSONObject examenObject = JSON.getExamen(examenId);
         this.totaalVragen = JSON.toInt(examenObject.get("totaalVragen"));
         this.naam = examenObject.get("naam").toString();
@@ -23,7 +24,7 @@ public class Examen {
         //vraag alle data op en generate een vragen array.
         //pass null naar studentAntwoord
 
-        for(Object vraagJson: vragenJsonArray){
+        for (Object vraagJson : vragenJsonArray) {
             JSONObject vraagObject = (JSONObject) vraagJson;
 
             String vraag = vraagObject.get("vraag").toString();
@@ -34,7 +35,7 @@ public class Examen {
         }
     }
 
-    public String getNaam(){
+    public String getNaam() {
         return this.naam;
     }
 
@@ -50,3 +51,24 @@ public class Examen {
         return examenId;
     }
 }
+
+class ExamenMaken {
+    public ExamenMaken() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welk examen wil je maken?");
+        Printer.Examenlijst();
+        int input = scanner.nextInt();
+
+
+        while (input > JSON.getExamList().size()) {
+            System.out.println("Verkeerde input, probeer opnieuw");
+            input = scanner.nextInt();
+        }
+        //  Examen examen = JSON.getExamen(input);
+
+
+    }
+}
+
+
