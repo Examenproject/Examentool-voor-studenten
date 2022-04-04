@@ -49,12 +49,33 @@ public class Printer {
                 "\n" +
                 "=================================");
     }
+    public static void simpelHoofdMenu(){
+        System.out.println("=================================\n" +
+                "Hallo, maak een keuze:\n" +
+                "\n" +
+                "1. Lijst met examens\n" +
+                "2. Lijst met studenten\n" +
+                "3. Examen maken\n" +
+                "4. Examen inzien\n" +
+                "5. beste studenten\n" +
+                "6. Uitschrijven\n" +
+                "7. Programma beëindigen\n" +
+                "\n" +
+                "=================================");
+    }
 
     public static void Examenlijst() {
         System.out.printf("=================================\n"+"Examenlijst: \n"+"\n");
         for (int  i = 0;  i < JSON.getExamList().size();  i++) {
             String examen = JSON.getExamList().get(i).getNaam();
             System.out.printf("%s\n", examen);
+        }
+    }
+    public static void getGemaakteExamens(ArrayList<GemaaktExamen> gemaaktExamens){
+        for(GemaaktExamen gemaaktExamen : gemaaktExamens){
+            System.out.println("ID: " + gemaaktExamen.getId());
+            System.out.println("Naam : " + gemaaktExamen.getExamenNaam());
+            System.out.println("============================");
         }
     }
 

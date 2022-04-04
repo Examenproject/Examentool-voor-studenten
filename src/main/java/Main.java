@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -61,6 +63,27 @@ public class Main {
         }
         
         //print het hoofdmenu uit met alle opties
+        int invoer = -1;
         Printer.Hoofdmenu();
+        while(invoer != 7) {
+            if(invoer != -1) {
+                Printer.simpelHoofdMenu();
+            }
+            invoer = scanner.nextInt();
+            if (invoer == 1) {
+                Printer.Examenlijst();
+            } else if (invoer == 2) {
+                Printer.Studentenlijst();
+            } else if (invoer == 3) {
+                //examen maken
+            } else if (invoer == 4) {
+                System.out.println("Welk examen wil je inzien?");
+                Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
+                int examenNummer = scanner.nextInt();
+                GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
+                gemaaktExamen.examenInzien();
+
+            }
+        }
     }
 }
