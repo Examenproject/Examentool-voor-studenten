@@ -34,13 +34,13 @@
     "cijfer": 1.0,
     "vragen": [
       {
-        "vraag": "wat is 1 + 1??",
+        "vraag": "wat is 1 + 1",
         "antwoord": 2,
         "studentAntwoord":  2,
         "punten": 1
       },
       {
-        "vraag": "wat is 1 + 1???",
+        "vraag": "wat is 1 + 1",
         "antwoord": 2,
         "studentAntwoord":  2,
         "punten": 2

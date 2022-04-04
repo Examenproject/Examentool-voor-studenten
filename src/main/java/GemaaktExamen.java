@@ -3,6 +3,7 @@ import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class GemaaktExamen {
     private String examenNaam;
@@ -54,16 +55,24 @@ public class GemaaktExamen {
         }
     }
     public void examenInzien(){
+        Scanner scanner = new Scanner(System.in);
+        int teller = 0;
         ArrayList<GemaaktExamen> examens = JSON.getGemaakteExamens(this.studentNummer);
         for(GemaaktExamen examen : examens){
             if(examen.getId() == id){
                 ArrayList<Vraag> vragen = examen.getVragen();
                 for(Vraag vraag : vragen){
+                    String input = null;
                     System.out.println("=================================");
                     System.out.println("Vraag : " + vraag.getVraag());
                     System.out.println("Antwoord : " + vraag.getAntwoord());
                     System.out.println("Gegeven antwoord : " + vraag.getStudentAntwoord());
                     System.out.println("=================================");
+                    while(input == null && teller < vragen.size() -1){
+                        System.out.println("Druk op enter om naar de volgende vraag te gaan.");
+                        input = scanner.nextLine();
+                    }
+                    teller++;
                 }
             }
         }
