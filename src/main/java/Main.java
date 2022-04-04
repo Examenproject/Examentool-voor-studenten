@@ -99,25 +99,25 @@ public class Main {
                     break; */
 
 
-        }
-        invoer = scanner.nextInt();
-        if (invoer == 1) {
-            Printer.Examenlijst();
-        } else if (invoer == 2) {
-            Printer.Studentenlijst();
-        } else if (invoer == 3) {
-            Examen.maakExamen();
-        } else if (invoer == 4) {
-            System.out.println("Welk examen wil je inzien?");
-            Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
-            int examenNummer = scanner.nextInt();
-            GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
-            gemaaktExamen.examenInzien();
+            invoer = scanner.nextInt();
+            if (invoer == 1) {
+                Printer.Examenlijst();
+            } else if (invoer == 2) {
+                Printer.Studentenlijst();
+            } else if (invoer == 3) {
+                Examen.maakExamen();
+            } else if (invoer == 4) {
+                System.out.println("Welk examen wil je inzien?");
+                Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
+                int examenNummer = scanner.nextInt();
+                GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
+                gemaaktExamen.examenInzien();
 
-        } else if (invoer == 5) {
-            //lijst met beste studenten
-        } else if (invoer == 6) {
-            //uitschrijven student
+            } else if (invoer == 5) {
+                //lijst met beste studenten
+            } else if (invoer == 6) {
+                //uitschrijven student
+            }
         }
     }
 }
