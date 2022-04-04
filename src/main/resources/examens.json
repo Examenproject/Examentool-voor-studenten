@@ -211,8 +211,20 @@
       },
       {
         "id": 16,
-        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee",
-        "antwoord": "Ja",
+        "vraag": "Is Africa een land?",
+        "antwoord": "Nee",
+        "punten": 2
+      },
+      {
+        "id": 17,
+        "vraag": "Wat is de hoofdstad van Nederland?",
+        "antwoord": "Amsterdan",
+        "punten": 2
+      },
+      {
+        "id": 18,
+        "vraag": "Hoeveel staten zijn er in de Verenigde Staten?",
+        "antwoord": "50",
         "punten": 2
       }
     ]

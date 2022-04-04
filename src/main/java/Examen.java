@@ -2,13 +2,16 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Examen {
     private String naam;
     private int examenId;// dit is de unieke id uit examens.json
     private int totaalVragen;
-    private ArrayList<Vraag> vragen = new ArrayList<>();
+    private static ArrayList<Vraag> vragen = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
+
 
     public Examen(int examenId) {
         this.examenId = examenId;
@@ -50,12 +53,9 @@ public class Examen {
     public int getExamenId() {
         return examenId;
     }
-}
 
-class ExamenMaken {
-    public ExamenMaken() {
-        Scanner scanner = new Scanner(System.in);
 
+    public static void maakExamen() {
         System.out.println("Welk examen wil je maken?");
         Printer.Examenlijst();
         int input = scanner.nextInt();
@@ -65,10 +65,26 @@ class ExamenMaken {
             System.out.println("Verkeerde input, probeer opnieuw");
             input = scanner.nextInt();
         }
-        //  Examen examen = JSON.getExamen(input);
-
-
+        Examen examen = JSON.getExamenObject(input);
+        ArrayList<Vraag> tempVraag = new ArrayList<>();
+        for (int i = 0; i < vragen.size(); i++) {
+            tempVraag.add(vragen.get(i));
+        }
+        Collections.shuffle(tempVraag);
+        tempVraag.remove(17);
+        tempVraag.remove(16);
+        tempVraag.remove(15);
+        tempVraag.remove(14);
+        tempVraag.remove(13);
+        tempVraag.remove(12);
+        tempVraag.remove(11);
+        tempVraag.remove(10);
+        for(Vraag vraag : tempVraag){
+            System.out.println(vraag.getVraag());
+        }
     }
+
+
 }
 
 
