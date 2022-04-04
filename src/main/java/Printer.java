@@ -108,7 +108,7 @@ public class Printer {
                 "c.%s", question, optie1, optie2, optie3);
     }
 
-    public static void Gehaald(Boolean gehaald, int cijfer) {
+    public static void Gehaald(Boolean gehaald, double cijfer) {
         String gehaaldTekst;
         if (gehaald) {
             gehaaldTekst = "wel";
