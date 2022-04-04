@@ -22,6 +22,8 @@ public class Main {
         //String input = scanner.nextLine();
         //Printer.Examenlijst();
 
+        //ExamenAfnemen.stelVraag(ArrayList<String>);
+
         Student student = null;
 
         Scanner scanner = new Scanner(System.in);

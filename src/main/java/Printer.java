@@ -120,13 +120,11 @@ public class Printer {
                 "=================================");
     }
 
-    public static void Vraag(String question, String optie1, String optie2, String optie3) {
+    public static void Vraag(String question) {
         System.out.printf("=================================\n" +
                 "vraag ?/10\n" +
                 "Vraag: %s\n" +
-                "a.%s\n" +
-                "b.%s\n" +
-                "c.%s", question, optie1, optie2, optie3);
+                "c.%s", question);
     }
 
     public static void Gehaald(Boolean gehaald, double cijfer) {
