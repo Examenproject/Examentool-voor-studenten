@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
 public class Printer {
-    public Printer(){
+    public Printer() {
 
     }
+
     public static void Inloggen() {
         System.out.println("=================================\n" +
                 "\n" +
@@ -52,23 +53,27 @@ public class Printer {
     }
 
     public static void Examenlijst() {
-        System.out.println("=================================\n" +
-                "Examenlijst: \n" +
-                "\n" +
-                "1. Reken examen\n" +
-                "2. Topo examen\n" +
-                "\n" +
-                "=================================");
+        System.out.printf("=================================\n"+"Examenlijst: \n"+"\n");
+        for (int  i = 0;  i < JSON.getExamList().size();  i++) {
+            String examen = JSON.getExamList().get(i).getNaam();
+            System.out.printf("%s\n", examen);
+        }
     }
 
     public static void Studentenlijst() {
-        System.out.println("=================================\n" +
-                "  Naam:      Studentennummer:\n");
-
+        String naam;
+        int studentennummer;
+        System.out.printf("=================================\n");
+        for (int  i = 0;  i < JSON.getStudentList().size();  i++) {
+            naam = JSON.getStudentList().get(i).getNaam();
+            studentennummer = JSON.getStudentList().get(i).getStudentNummer();
+            System.out.printf("Naam:%s\nStudentennummer:%d\n\n",naam ,studentennummer);
+        }
     }
 
     public static void BesteStudent() {
-        System.out.println("     _______________\n" +
+
+        System.out.printf("     _______________\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
@@ -85,30 +90,31 @@ public class Printer {
                 "      `.  * * *  .'\n" +
                 "        `-.....-'\n" +
                 "=================================\n" +
-                "Naam:      Studentennummer:     Percentage:\n" +
-                "Joe        12345678             100%");
+                "Naam:      Studentennummer:     Percentage:\n");
     }
 
     public static void Uitschrijven() {
-        System.out.println("=================================\n" +
+        System.out.printf("=================================\n" +
                 "Weet u zeker dat u wilt uitschrijven?\n" +
                 "1.terug naar hoofdmenu\n" +
                 "2.uitschrijven\n" +
                 "=================================");
     }
 
-    public static void Vraag() {
-        System.out.println("=================================\n" +
+    public static void Vraag(String question, String optie1, String optie2, String optie3) {
+        System.out.printf("=================================\n" +
                 "vraag ?/10\n" +
-                "Vraag: ???\n" +
-                "a.???\n" +
-                "b.???\n" +
-                "c.???");
+                "Vraag: %s\n" +
+                "a.%s\n" +
+                "b.%s\n" +
+                "c.%s", question, optie1, optie2, optie3);
     }
 
-    public static void Gehaald() {
-        System.out.println("=================================\n" +
-                "examen (niet) gehaald met een  4/10\n" +
-                "1. exit");
+    public static void Gehaald(Boolean gehaald, int cijfer) {
+        System.out.printf("=================================\n" +
+                "examen %s gehaald met een  %d\n" +
+                "1. exit", gehaald, cijfer);
     }
+
+
 }

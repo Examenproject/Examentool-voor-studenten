@@ -1,11 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static Student student;
 
     public static void main(String[] args) {
-
-        //HIER KOMT ALLE LOGIC VOOR HET MENU
-
         //login system maken die ene User object returned
         //user object assignen naar Student
 
@@ -16,15 +15,14 @@ public class Main {
         //Interface laten zien
 
         //vragen om input en het proces starten
+        //Printer.Inloggen();
+        //Scanner scanner = new Scanner(System.in);
+        //String input = scanner.nextLine();
+        //Printer.Examenlijst();
 
-        Printer.Inloggen();
-        Printer.Registreren();
-        Printer.BesteStudent();
         Printer.Examenlijst();
-        Printer.Gehaald();
-        Printer.Hoofdmenu();
         Printer.Studentenlijst();
-        Printer.Uitschrijven();
-        Printer.Vraag();
+        /*GemaaktExamen gemaaktExamen = JSON.getGemaakteExamens(12345678).get(0);
+        gemaaktExamen.examenInzien();*/
     }
 }

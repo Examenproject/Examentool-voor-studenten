@@ -70,7 +70,7 @@ public class JSON {
                 // Op deze manier krijg je in die ArrayList dus een overzicht van alle studenten die een bepaalde meegegeven toets hebben gemaakt.
                 if (examenNummer == examenId && !isToegevoegd) {
                     isToegevoegd = true;
-                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens"))));
+                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer")))));
                 }
             }
         }
@@ -78,7 +78,7 @@ public class JSON {
     }
 
     //returned alle gemaakte examens door een student. Geef als input het studentnummer uit de file studenten.json
-    public static ArrayList<GemaaktExamen> getExamens(int studentNummer) {
+    public static ArrayList<GemaaktExamen> getGemaakteExamens(int studentNummer) {
         JSONArray studenten = readFile("studenten");
         ArrayList<GemaaktExamen> lijstMetExamens = new ArrayList<>();
 
@@ -98,7 +98,7 @@ public class JSON {
                     //get examen Object met het unieke ID
                     JSONObject examenObject = getExamen(toInt(gemaakteExamen.get("examenID")));
 
-                    lijstMetExamens.add(new GemaaktExamen(examenObject.get("naam").toString(), toInt(examenObject.get("id")), toInt(examenObject.get("totaalVragen"))));
+                    lijstMetExamens.add(new GemaaktExamen(toInt(examenObject.get("id"))));
                 }
             }
         }
@@ -106,7 +106,7 @@ public class JSON {
     }
 
     //return data van een student met het studentnummer
-    public static JSONObject getStudent(int studentNummer) {
+    public static Student getStudent(int studentNummer) {
         JSONArray studenten = readFile("studenten");
 
         for (Object student : studenten) { // Gaat alle studenten in de studenten file langs.
@@ -114,7 +114,7 @@ public class JSON {
             int studentId = toInt(jsonObject.get("nummer"));
 
             if (studentId == studentNummer) { // Als je meegegeven studentNummer gelijk is aan een in de file gevonden studentnummer dan geeft hij dat object terug. Dat is tenslotte de student naar wie je zoekt. Je krijgt alle eigenschappen van die student terug.
-                return jsonObject;
+                return new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer"))));
             }
         }
         return null;
@@ -126,6 +126,7 @@ public class JSON {
         for (Object examen : examens) {
             JSONObject jsonObject = (JSONObject) examen;
             int examenNummer = toInt(jsonObject.get("id"));
+
             if (examenNummer == examenId) {
                 return jsonObject;
             }
@@ -139,7 +140,7 @@ public class JSON {
 
         for (Object examenAntwoord : examenAntwoorden) {
             JSONObject jsonObject = (JSONObject) examenAntwoord;
-            int id = toInt(jsonObject.get("id"));
+            int id = toInt(jsonObject.get("examenID"));
 
             if (id == uniekId) {
                 return jsonObject;
@@ -149,7 +150,7 @@ public class JSON {
     }
 
     //voeg een student toe aan studenten.json met de 3 parameters
-    public static void addStudent(String name, String achternaam, String wachtwoord) {
+    public static int addStudent(String name, String achternaam, String wachtwoord) {
         //generate a random number that will be assigned to the student
         Random rnd = new Random();
         int number = Integer.parseInt(String.format("2022%04d", rnd.nextInt(99999)));
@@ -171,6 +172,7 @@ public class JSON {
         studenten.add(newStudent);
 
         writeJSON(studenten, "studenten");
+        return number;
     }
 
     //verwijder een student met een studentnummer
@@ -193,7 +195,6 @@ public class JSON {
 
         writeJSON(newStudentList, "studenten");
 
-        //-------------------------------------------------------------------
 
         //verwijder alle objects waarin het studentnummer voorkomt in het bestand examenAntwoorden
         JSONArray examenAtwoorden = JSON.readFile("examenAntwoorden");
@@ -214,7 +215,7 @@ public class JSON {
         writeJSON(newExamenAntwoordenList, "examenAntwoorden");
     }
 
-    public static int saveGemaaktExamen(int examenID, int studentNummer, JSONArray examenVragen) {
+    public static int saveGemaaktExamen(int examenID, int studentNummer, ArrayList<Vraag> vragen) {
         //generate a random number that will be assigned to the students answers
         Random rnd = new Random();
         int number = Integer.parseInt(String.format("%08d", rnd.nextInt(99999999)));
@@ -228,6 +229,20 @@ public class JSON {
         //get the current date so we can use it in our json object
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();
+
+        //generate JSON Arrayy with all the questions
+
+        JSONArray examenVragen = new JSONArray();
+
+        for(Vraag vraag: vragen){
+            JSONObject vraagObject = new JSONObject();
+            vraagObject.put("vraag", vraag.getVraag());
+            vraagObject.put("antwoord", vraag.getAntwoord());
+            vraagObject.put("studentAntwoord", vraag.getStudentAntwoord());
+            vraagObject.put("punten", vraag.getPunten());
+
+            examenVragen.add(vraagObject);
+        }
 
         //create a new examAnswers json object
         JSONObject newExamen = new JSONObject();
@@ -308,5 +323,48 @@ public class JSON {
         student.put("gemiddelde", total / count);
 
         writeJSON(studenten, "studenten");
+    }
+
+
+    public boolean studentLogin(int studentNummer, String wachtwoord) {
+        JSONArray studenten = readFile("studenten");
+
+
+        //find the student object
+        for (Object studentObject : studenten) {
+            JSONObject tempStudent = (JSONObject) studentObject;
+
+            if (toInt(tempStudent.get("nummer")) == studentNummer && tempStudent.get("wachtwoord").equals(wachtwoord)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static ArrayList<Examen> getExamList() {
+        JSONArray examens = readFile("examens");
+
+        ArrayList<Examen> returnArray = new ArrayList<>();
+
+        for (Object examen : examens) {
+            JSONObject jsonObject = (JSONObject) examen;
+
+            returnArray.add(new Examen(toInt(jsonObject.get("id"))));
+        }
+
+        return returnArray;
+    }
+
+    public  static ArrayList<Student> getStudentList() {
+        JSONArray studenten = readFile("studenten");
+
+        ArrayList<Student> returnArray = new ArrayList<>();
+
+        for (Object student : studenten) { // Gaat alle studenten in de studenten file langs.
+            JSONObject jsonObject = (JSONObject) student;
+
+            returnArray.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer")))));
+        }
+        return returnArray;
     }
 }
