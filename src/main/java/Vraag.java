@@ -11,6 +11,10 @@ public class Vraag {
         this.punten = punten;
     }
 
+    public void setAntwoord(String userInput){
+        this.antwoord = userInput;
+    }
+
     public String getAntwoord() {
         return antwoord;
     }
