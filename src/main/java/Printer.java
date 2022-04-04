@@ -14,7 +14,7 @@ public class Printer {
                 "\n" +
                 "- *Het studentennummer is minimaal \uD835\uDFF4 cijfers lang en is uniek*\n" +
                 "\n" +
-                "Nog geen account? Typ aanmelden om een account toe te voegen\n" +
+                "Nog geen account? Type \"aanmelden\" om een account toe te voegen\n" +
                 "\n" +
                 "=================================");
     }

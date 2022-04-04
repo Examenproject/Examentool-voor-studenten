@@ -45,12 +45,22 @@ public class Main {
             studentNummer = Integer.parseInt(firstInput);
             String wachtwoordInput = scanner.nextLine();
 
-            if(JSON.studentLogin(studentNummer, wachtwoordInput)){
-                student = JSON.getStudent(studentNummer);
+            boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
+
+            while(!isIngelogd){
+                System.out.println("Incorrecte validatie. Vul je studentnummer en wachtwoord opnieuw in.");
+                studentNummer = scanner.nextInt();
+                scanner.nextLine();
+
+                wachtwoordInput = scanner.nextLine();
+
+                isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
             }
+
+            student = JSON.getStudent(studentNummer);
         }
-
+        
+        //print het hoofdmenu uit met alle opties
         Printer.Hoofdmenu();
-
     }
 }
