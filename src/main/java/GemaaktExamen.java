@@ -25,17 +25,12 @@ public class GemaaktExamen {
     private void getData(){
         JSONObject examenObject = JSON.getExamenAntwoorden(id);
         this.totaalVragen = JSON.toInt(examenObject.get("totaalVragen"));
-        System.out.println(examenObject.get("totaalVragen"));
         this.uniekExamenId = JSON.toInt(examenObject.get("examenID"));
-        System.out.println(examenObject.get("examenID"));
         this.examenNaam = examenObject.get("naam").toString();
-        System.out.println(examenObject.get("naam"));
         this.poging = JSON.toInt(examenObject.get("poging"));
-        System.out.println(examenObject.get("poging"));
         this.date = examenObject.get("date").toString();
         this.cijfer = (double) examenObject.get("cijfer");
         this.studentNummer = JSON.toInt(examenObject.get("studentNummer"));
-        System.out.println(examenObject.get("studentNummer"));
 
         if(this.cijfer >= 5.5){
             this.geslaagd = true;
