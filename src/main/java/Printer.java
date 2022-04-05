@@ -93,7 +93,6 @@ public class Printer {
     }
 
     public static void BesteStudent() {
-
         System.out.printf("     _______________\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
