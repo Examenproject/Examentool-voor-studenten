@@ -14,6 +14,7 @@ public class ExamenAfnemen {
     int studentNummer;
 
     public ExamenAfnemen(Student student) {
+
         studentNummer = student.getStudentNummer();
     }
 
@@ -21,7 +22,11 @@ public class ExamenAfnemen {
         System.out.println("Welk examen wil je maken?");
         Printer.Examenlijst();
         int input = scanner.nextInt();
+
         uniekExamenID = input;
+
+        uniekExamenID = input;
+
         scanner.nextLine();
 
 
@@ -39,6 +44,7 @@ public class ExamenAfnemen {
         Collections.shuffle(examenVragen);
 
         for (int i = 0; i < 10; i++) {
+
             randomVragen.add(examenVragen.get(i));
         }
 
@@ -52,17 +58,24 @@ public class ExamenAfnemen {
             Printer.Vraag(vragenLijst.get(i).getVraag(), i + 1);
             StudentAntwoord = scanner.nextLine();
 
+
             if (StudentAntwoord.equalsIgnoreCase(vragenLijst.get(i).getAntwoord())) {
                 goed++;
             } else {
-                fout++;
+
+                if (StudentAntwoord.equalsIgnoreCase(vragenLijst.get(i).getAntwoord())) {
+                    goed++;
+                } else {
+
+                    fout++;
+                }
+                vragenLijst.get(i).setStudentAntwoord(StudentAntwoord);
+
             }
-            vragenLijst.get(i).setStudentAntwoord(StudentAntwoord);
+            berekenCijfer(vragenLijst);
+
 
         }
-        berekenCijfer(vragenLijst);
-
-
     }
 
     public void berekenCijfer(ArrayList<Vraag> vragenlijst) {
@@ -71,6 +84,8 @@ public class ExamenAfnemen {
         int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst);
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
+
     }
+
 
 }

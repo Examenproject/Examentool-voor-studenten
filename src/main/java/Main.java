@@ -105,7 +105,8 @@ public class Main {
             } else if (invoer == 2) {
                 Printer.Studentenlijst();
             } else if (invoer == 3) {
-                Examen.maakExamen();
+                ExamenAfnemen examenAfnemen = new ExamenAfnemen(student);
+                examenAfnemen.maakExamen();
             } else if (invoer == 4) {
                 System.out.println("Welk examen wil je inzien?");
                 Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));

@@ -14,6 +14,7 @@ public class Examen {
     static Scanner scanner = new Scanner(System.in);
 
 
+
     public Examen(int examenId) {
         this.examenId = examenId;
         getData();
@@ -55,33 +56,6 @@ public class Examen {
         return examenId;
     }
 
-
-    public static void maakExamen() {
-        System.out.println("Welk examen wil je maken?");
-        Printer.Examenlijst();
-        int input = scanner.nextInt();
-
-
-        while (input > JSON.getExamList().size()) {
-            System.out.println("Verkeerde input, probeer opnieuw");
-            input = scanner.nextInt();
-        }
-
-        Examen examen = JSON.getExamenObject(input);
-        ArrayList<Vraag> examenVragen = examen.getVragen();
-
-        ArrayList<Vraag> randomVragen = new ArrayList<>();
-
-        Collections.shuffle(examenVragen);
-
-        for(int i = 0; i < 10; i++){
-            randomVragen.add(examenVragen.get(i));
-        }
-
-        for(Vraag vraag : randomVragen){
-            System.out.println(vraag.getVraag());
-        }
-    }
 
 
 }
