@@ -101,13 +101,17 @@ public class Main {
 
             invoer = scanner.nextInt();
             if (invoer == 1) {
+                //lijst met examens
                 Printer.Examenlijst();
             } else if (invoer == 2) {
+                //lijst met studenten
                 Printer.Studentenlijst();
             } else if (invoer == 3) {
+                //examen maken
                 ExamenAfnemen examenAfnemen = new ExamenAfnemen(student);
                 examenAfnemen.maakExamen();
             } else if (invoer == 4) {
+                //examen inzien
                 System.out.println("Welk examen wil je inzien?");
                 Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
                 int examenNummer = scanner.nextInt();
@@ -117,11 +121,11 @@ public class Main {
             } else if (invoer == 5) {
                 //lijst met beste studenten
             } else if (invoer == 6) {
-                //uitschrijven student
-            } else if (invoer == 7) {
                 //welke examens heeft een student gehaald?
-            } else if (invoer == 8) {
+            } else if (invoer == 7) {
                 //welke student heeft de meeste examens gehaald?
+            } else if (invoer == 8) {
+                //uitschrijven student
             } else if (invoer == 9) {
                 //exit
             }
