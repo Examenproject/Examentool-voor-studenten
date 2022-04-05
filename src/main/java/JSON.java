@@ -379,4 +379,17 @@ public class JSON {
         }
         return null;
     }
+    public static GemaaktExamen getExamenAntwoordenObject(int uniekId) {
+        JSONArray examenAntwoorden = readFile("examenAntwoorden");
+
+        for (Object examenAntwoord : examenAntwoorden) {
+            JSONObject jsonObject = (JSONObject) examenAntwoord;
+            int id = toInt(jsonObject.get("id"));
+
+            if (id == uniekId) {
+                return new GemaaktExamen(uniekId);
+            }
+        }
+        return null;
+    }
 }
