@@ -57,8 +57,10 @@ public class Printer {
                 "3. Examen maken\n" +
                 "4. Examen inzien\n" +
                 "5. Beste studenten\n" +
-                "6. Uitschrijven\n" +
-                "7. Programma beëindigen\n" +
+                "6. Welke examens heeft een student gehaald\n" +
+                "7. Welke student heeft de meeste examens gehaald\n"+
+                "8. Uitschrijven student\n" +
+                "9. Programma beëindigen\n" +
                 "\n" +
                 "=================================");
     }
