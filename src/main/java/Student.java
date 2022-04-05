@@ -41,4 +41,8 @@ public class Student {
     public double getGemiddelde() {
         return gemiddelde;
     }
+
+    public String getWachtwoord() {
+        return wachtwoord;
+    }
 }

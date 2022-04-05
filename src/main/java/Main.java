@@ -7,7 +7,7 @@ public class Main {
     public static Student student;
 
     public static void main(String[] args) {
-        //login system maken die ene User object returned
+        //login system maken die een User object returned
         //user object assignen naar Student
 
         //loopen door elke gemaakte examen en dit ook assignen aan de Student met Examen Obejcts.
@@ -71,33 +71,6 @@ public class Main {
             if (invoer != -1) {
                 Printer.simpelHoofdMenu();
             }
-            /**
-             * Voorbeeld van een switch case. Als het niets is halen we het morgen weg.
-             */
-           /*  switch (invoer = scanner.nextInt()) {
-                case 0:
-                    Printer.Examenlijst();
-                    break;
-                case 1:
-                    Printer.Studentenlijst();
-                    break;
-                case 2:
-                    Examen.maakExamen();
-                    break;
-                case 3:
-                    System.out.println("Welk examen wil je inzien?");
-                    Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
-                    int examenNummer = scanner.nextInt();
-                    GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
-                    gemaaktExamen.examenInzien();
-                    break;
-                case 4:
-                    //lijst met beste studenten
-                    break;
-                case 5:
-                    //uitschrijven student
-                    break; */
-
 
             invoer = scanner.nextInt();
             if (invoer == 1) {
@@ -127,6 +100,14 @@ public class Main {
                 //welke student heeft de meeste examens gehaald?
             } else if (invoer == 8) {
                 //uitschrijven student
+                scanner.nextLine();
+                System.out.println("Voer uw wachtwoord in:");
+                String wachtwoordInput = scanner.nextLine();
+                if (JSON.studentLogin(student.getStudentNummer(), wachtwoordInput)) {
+                    JSON.removeStudent(student.getStudentNummer());
+                    System.exit(0);
+                }
+
             } else if (invoer == 9) {
                 //exit
                 System.exit(0);
