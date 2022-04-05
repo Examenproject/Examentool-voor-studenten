@@ -118,6 +118,12 @@ public class Main {
                 //lijst met beste studenten
             } else if (invoer == 6) {
                 //uitschrijven student
+            } else if (invoer == 7) {
+                //welke examens heeft een student gehaald?
+            } else if (invoer == 8) {
+                //welke student heeft de meeste examens gehaald?
+            } else if (invoer == 9) {
+                //exit
             }
         }
     }
