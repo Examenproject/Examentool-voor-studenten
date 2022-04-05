@@ -215,7 +215,7 @@ public class JSON {
         writeJSON(newExamenAntwoordenList, "examenAntwoorden");
     }
 
-    public static int saveGemaaktExamen(int examenID, int studentNummer, ArrayList<Vraag> vragen) {
+    public static int saveGemaaktExamen(int examenID, int studentNummer, ArrayList<Vraag> vragen, double cijfer) {
         //generate a random number that will be assigned to the students answers
         Random rnd = new Random();
         int number = Integer.parseInt(String.format("%08d", rnd.nextInt(99999999)));
@@ -257,7 +257,7 @@ public class JSON {
 
         //EDIT THIS
         newExamen.put("poging", gemaakteExamen.get(0));
-        newExamen.put("cijfer", 6.9);
+        newExamen.put("cijfer", String.format("%.1f", cijfer));
 
 
         //add the newly created json object to the whole list of exam answers
