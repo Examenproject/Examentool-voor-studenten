@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "date": "05\/04\/2022 14:15:49",
+    "poging": 0,
+    "vragen": [
+      {
+        "antwoord": "Jericho in Palestina",
+        "studentAntwoord": "jam",
+        "punten": 3,
+        "vraag": "Wat is de oudste continu bewoonde stad ter wereld?\n"
+      },
+      {
+        "antwoord": "Hoofdstad",
+        "studentAntwoord": "jan",
+        "punten": 2,
+        "vraag": "Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?\n"
+      },
+      {
+        "antwoord": "B",
+        "studentAntwoord": "ja",
+        "punten": 2,
+        "vraag": "Wat is de hoofdstad van Estland?\n"
+      },
+      {
+        "antwoord": "Ja",
+        "studentAntwoord": "ok",
+        "punten": 2,
+        "vraag": "'Ouagadougou' is de hoofdstad van Burkina Faso.\nJa\nNee\n"
+      },
+      {
+        "antwoord": "Accra",
+        "studentAntwoord": "den haag",
+        "punten": 1,
+        "vraag": "Wat is de hoofdstad van Ghana?\n"
+      },
+      {
+        "antwoord": "50",
+        "studentAntwoord": "50",
+        "punten": 2,
+        "vraag": "Hoeveel staten zijn er in de Verenigde Staten?\n"
+      },
+      {
+        "antwoord": "B",
+        "studentAntwoord": "romeina",
+        "punten": 2,
+        "vraag": "Van welk land is Valetta de hoofdstad?\n"
+      },
+      {
+        "antwoord": "Siam",
+        "studentAntwoord": "soepelland",
+        "punten": 2,
+        "vraag": "Hoe werd Thailand tot 1939 genoemd?\n"
+      },
+      {
+        "antwoord": "Arnhem",
+        "studentAntwoord": "URK",
+        "punten": 1,
+        "vraag": "Wat is de hoofdstad van Gelderland?\n"
+      },
+      {
+        "antwoord": "Nee",
+        "studentAntwoord": "URK",
+        "punten": 2,
+        "vraag": "Is Africa een land?\n"
+      }
+    ],
+    "cijfer": 1.9,
+    "id": 98017041,
+    "examenID": 2,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  }
+]

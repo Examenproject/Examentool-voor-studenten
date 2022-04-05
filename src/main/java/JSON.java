@@ -21,7 +21,6 @@ public class JSON {
             return 0;
         }
     }
-
     // Leest complete .json file uit en returned dit als een array.
     public static JSONArray readFile(String path) {
         JSONParser jsonParser = new JSONParser();
@@ -248,7 +247,7 @@ public class JSON {
         JSONObject newExamen = new JSONObject();
         newExamen.put("naam", gemaakteExamen.get("naam"));
         newExamen.put("id", number);
-        newExamen.put("studentenNummer", studentNummer);
+        newExamen.put("studentNummer", studentNummer);
         newExamen.put("date", formatter.format(date));
         newExamen.put("examenID", examenID);
         newExamen.put("totaalVragen", gemaakteExamen.get("totaalVragen"));
