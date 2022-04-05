@@ -26,8 +26,6 @@ public class ExamenAfnemen {
 
         uniekExamenID = input;
 
-        uniekExamenID = input;
-
         scanner.nextLine();
 
 
@@ -59,30 +57,28 @@ public class ExamenAfnemen {
             Printer.Vraag(vragenLijst.get(i).getVraag(), i + 1);
             StudentAntwoord = scanner.nextLine();
 
-
             if (StudentAntwoord.equalsIgnoreCase(vragenLijst.get(i).getAntwoord())) {
                 goed++;
             } else {
-
-                if (StudentAntwoord.equalsIgnoreCase(vragenLijst.get(i).getAntwoord())) {
-                    goed++;
-                } else {
-
-                    fout++;
-                }
-                vragenLijst.get(i).setStudentAntwoord(StudentAntwoord);
-
+                fout++;
             }
-            berekenCijfer(vragenLijst);
-
+            vragenLijst.get(i).setStudentAntwoord(StudentAntwoord);
 
         }
+        berekenCijfer(vragenLijst);
+
+
     }
+
 
     public void berekenCijfer(ArrayList<Vraag> vragenlijst) {
         // 9 * S / L +N = Cijfer    <--- formule cijfer berekenen
         Double cijfer = 9.0 * goed / randomVragen.size() + 1.0;
-        int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst);
+        for (int i = 0; i < vragenlijst.size(); i++) {
+            System.out.println(vragenlijst.get(i).getStudentAntwoord());
+            System.out.println(vragenlijst.get(i).getAntwoord());
+        }
+        int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst, cijfer);
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
 
