@@ -74,13 +74,10 @@ public class ExamenAfnemen {
     public void berekenCijfer(ArrayList<Vraag> vragenlijst) {
         // 9 * S / L +N = Cijfer    <--- formule cijfer berekenen
         Double cijfer = 9.0 * goed / randomVragen.size() + 1.0;
-        for (int i = 0; i < vragenlijst.size(); i++) {
-            System.out.println(vragenlijst.get(i).getStudentAntwoord());
-            System.out.println(vragenlijst.get(i).getAntwoord());
-        }
         int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst, cijfer);
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
+        JSON.updateStudent(studentNummer,gemaaktExamenID, uniekExamenID);
 
     }
 

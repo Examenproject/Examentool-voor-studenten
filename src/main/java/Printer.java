@@ -134,7 +134,7 @@ public class Printer {
             gehaaldTekst = "niet";
         }
         System.out.printf("=================================\n" +
-                "examen %s gehaald met een  %.1f\n" + "1. exit", gehaaldTekst, cijfer);
+                "examen %s gehaald met een  %.1f\n" + "exit\n", gehaaldTekst, cijfer);
 
     }
 }

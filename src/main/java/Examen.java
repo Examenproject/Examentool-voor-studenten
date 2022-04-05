@@ -56,8 +56,6 @@ public class Examen {
         return examenId;
     }
 
-
-
 }
 
 

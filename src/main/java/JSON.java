@@ -256,7 +256,7 @@ public class JSON {
 
 
         //EDIT THIS
-        newExamen.put("poging", gemaakteExamen.get(0));
+        newExamen.put("poging", 0);
         newExamen.put("cijfer", cijfer);
 
 
