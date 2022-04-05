@@ -257,7 +257,7 @@ public class JSON {
 
         //EDIT THIS
         newExamen.put("poging", gemaakteExamen.get(0));
-        newExamen.put("cijfer", String.format("%.1f", cijfer));
+        newExamen.put("cijfer", cijfer);
 
 
         //add the newly created json object to the whole list of exam answers
