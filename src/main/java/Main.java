@@ -127,7 +127,7 @@ public class Main {
             } else if (invoer == 8) {
                 //uitschrijven student
             } else if (invoer == 9) {
-                //exit
+                System.exit(0);
             }
         }
     }
