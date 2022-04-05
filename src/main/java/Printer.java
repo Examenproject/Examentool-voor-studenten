@@ -135,5 +135,6 @@ public class Printer {
         }
         System.out.printf("=================================\n" +
                 "examen %s gehaald met een  %d\n" + "1. exit", gehaaldTekst, cijfer);
+
     }
 }
