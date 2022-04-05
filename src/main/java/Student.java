@@ -6,14 +6,16 @@ public class Student {
     private int studentNummer;
     private String wachtwoord;
     private int gehaaldeExamens;
+    private double gemiddelde;
     public ArrayList<GemaaktExamen> examens = new ArrayList<>();
 
-    Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens, ArrayList<GemaaktExamen> examens) {
+    Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens, ArrayList<GemaaktExamen> examens, double gemiddelde) {
         this.naam = naam;
         this.achterNaam = achterNaam;
         this.studentNummer = studentNummer;
         this.gehaaldeExamens = gehaaldeExamens;
         this.examens = examens;
+        this.gemiddelde = gemiddelde;
     }
 
     public String getAchterNaam() {
@@ -34,5 +36,9 @@ public class Student {
 
     public ArrayList<GemaaktExamen> getExamens() {
         return examens;
+    }
+
+    public double getGemiddelde() {
+        return gemiddelde;
     }
 }

@@ -1,1 +1,51 @@
-[{"achternaam":"van der Lelij","gemiddelde":1.45,"wachtwoord":"1234","naam":"Karel","nummer":12345678,"gehaaldeExamens":0,"examens":[{"antwoordID":31302987,"examenID":2},{"antwoordID":48169169,"examenID":1}]},{"achternaam":"Ploeg","gemiddelde":6.9,"wachtwoord":"1234","naam":"Marcel","nummer":23456789,"gehaaldeExamens":2,"examens":[{"antwoordID":14532345,"examenID":1},{"antwoordID":26543241,"examenID":2}]},{"achternaam":"Jansen","gemiddelde":6.9,"wachtwoord":"1234","naam":"Jan","nummer":34567890,"gehaaldeExamens":2,"examens":[{"antwoordID":14532345,"examenID":1},{"antwoordID":26543241,"examenID":2}]},{"achternaam":"de 2e","gemiddelde":3.25,"wachtwoord":"1234","naam":"Joop","nummer":45678912,"gehaaldeExamens":1,"examens":[{"antwoordID":26543241,"examenID":2},{"antwoordID":14532345,"examenID":1}]}]
+[
+  {
+    "achternaam": "van der Lelij",
+    "gemiddelde": 1.45,
+    "wachtwoord": "1234",
+    "naam": "Karel",
+    "nummer": 12345678,
+    "gehaaldeExamens": 3,
+    "examens": [
+      {
+        "antwoordID": 31302987,
+        "examenID": 2
+      },
+      {
+        "antwoordID": 48169169,
+        "examenID": 1
+      }
+    ]
+  },
+  {
+    "achternaam": "Ploeg",
+    "gemiddelde": 6.9,
+    "wachtwoord": "1234",
+    "naam": "Marcel",
+    "nummer": 23456789,
+    "gehaaldeExamens": 9,
+    "examens": [
+    ]
+  },
+  {
+    "achternaam": "Jansen",
+    "gemiddelde": 7.0,
+    "wachtwoord": "1234",
+    "naam": "Jan",
+    "nummer": 34567890,
+    "gehaaldeExamens": 10,
+    "examens": [
+    ]
+  },
+  {
+    "achternaam": "de 2e",
+    "gemiddelde": 3.25,
+    "wachtwoord": "1234",
+    "naam": "Joop",
+    "nummer": 45678912,
+    "gehaaldeExamens": 3,
+    "examens": [
+
+    ]
+  }
+]

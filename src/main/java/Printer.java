@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 
 public class Printer {
-    public Printer() {
-
-    }
 
     public static void Inloggen() {
         System.out.println("=================================\n" +
@@ -43,7 +40,7 @@ public class Printer {
                 "2. Lijst met studenten\n" +
                 "3. Examen maken\n" +
                 "4. Examen inzien\n" +
-                "5. beste studenten\n" +
+                "5. Beste studenten\n" +
                 "6. Welke examens heeft een student gehaald\n" +
                 "7. Welke student heeft de meeste examens gehaald\n"+
                 "8. Uitschrijven student\n" +
@@ -59,7 +56,7 @@ public class Printer {
                 "2. Lijst met studenten\n" +
                 "3. Examen maken\n" +
                 "4. Examen inzien\n" +
-                "5. beste studenten\n" +
+                "5. Beste studenten\n" +
                 "6. Uitschrijven\n" +
                 "7. Programma beëindigen\n" +
                 "\n" +
@@ -92,7 +89,7 @@ public class Printer {
         }
     }
 
-    public static void BesteStudent() {
+    public static void Award(String naam) {
         System.out.printf("     _______________\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
@@ -109,8 +106,12 @@ public class Printer {
                 "     :  *       *  :\n" +
                 "      `.  * * *  .'\n" +
                 "        `-.....-'\n" +
-                "=================================\n" +
-                "Naam:      Studentennummer:     Percentage:\n");
+                "This award belongs to: " + naam + "\n\n");
+    }
+
+    public static void StudentScore(int length, int num, String naam, double gemiddelde, int gehaaldeExamens, int totaalGemaakteExamens){
+        String format = "%d. %-" + (length + 2) + "s %2d van de %2d examens  gemiddelde %.1f%n";
+        System.out.printf(format, num, naam, gehaaldeExamens, totaalGemaakteExamens, gemiddelde);
     }
 
     public static void Uitschrijven() {

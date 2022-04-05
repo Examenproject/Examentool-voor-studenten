@@ -118,8 +118,9 @@ public class Main {
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
             } else if (invoer == 5) {
-
-                //lijst met beste studenten
+                //lijst met beste studenten SCOREBOARD
+                Scoreboard scoreboard = new Scoreboard();
+                scoreboard.besteStudenten();
             } else if (invoer == 6) {
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
@@ -127,7 +128,7 @@ public class Main {
             } else if (invoer == 8) {
                 //uitschrijven student
             } else if (invoer == 9) {
-                System.exit(0);
+                //exit
             }
         }
     }
