@@ -118,9 +118,7 @@ public class Printer {
 
     public static void Uitschrijven() {
         System.out.printf("=================================\n" +
-                "Weet u zeker dat u wilt uitschrijven?\n" +
-                "1.terug naar hoofdmenu\n" +
-                "2.uitschrijven\n" +
+                "Voer uw wachtwoord in als u zich wilt uitschrijven\n" +
                 "=================================");
     }
 
@@ -139,6 +137,5 @@ public class Printer {
         }
         System.out.printf("=================================\n" +
                 "examen %s gehaald met een  %.1f\n" + "exit\n", gehaaldTekst, cijfer);
-
     }
 }

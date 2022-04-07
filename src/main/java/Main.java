@@ -107,7 +107,7 @@ public class Main {
             } else if (invoer == 8) {
                 //uitschrijven student
                 scanner.nextLine();
-                System.out.println("Voer uw wachtwoord in:");
+                Printer.Uitschrijven();
                 String wachtwoordInput = scanner.nextLine();
                 if (JSON.studentLogin(student.getStudentNummer(), wachtwoordInput)) {
                     JSON.removeStudent(student.getStudentNummer());
