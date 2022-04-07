@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Student {
     private String naam;
@@ -49,10 +51,28 @@ public class Student {
     public void gemaaktExamen() {
         ArrayList<GemaaktExamen> gemaaktExamen = JSON.getGemaakteExamens(studentNummer);
         for (GemaaktExamen gemaaktExamen1 : gemaaktExamen) {
-            
+
             if (gemaaktExamen1.isGeslaagd()) {
                 System.out.printf("%s is gehaald met het cijfer : %.1f.\n",gemaaktExamen1.getExamenNaam(),gemaaktExamen1.getCijfer());
             }
+        }
+    }
+    public void meesteExamens(){
+        ArrayList<Student> studenten = JSON.getStudenten();
+        //sort names
+        Comparator<Student> comparator = Comparator.comparingInt(s -> s.getNaam().length());
+        studenten.sort(comparator);
+        Collections.reverse(studenten);
+
+        int length = studenten.get(0).getNaam().length();
+
+        //final Sort
+        Comparator<Student> finalComparator = Comparator.comparingInt(Student::getGehaaldeExamens).thenComparingDouble(Student::getGemiddelde);
+        studenten.sort(finalComparator);
+        Collections.reverse(studenten);
+
+        for(Student student : studenten){
+            System.out.printf("%s heeft %d examens gehaald met een gemiddelde van %.1f.\n", student.getNaam(), student.getGehaaldeExamens(), student.getGemiddelde());
         }
     }
 }

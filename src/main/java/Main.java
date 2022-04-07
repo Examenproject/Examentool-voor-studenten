@@ -67,7 +67,7 @@ public class Main {
         //print het hoofdmenu uit met alle opties
         int invoer = -1;
         Printer.Hoofdmenu();
-        while (invoer != 7) {
+        while (invoer != 9) {
             if (invoer != -1) {
                 Printer.simpelHoofdMenu();
             }
@@ -95,7 +95,7 @@ public class Main {
                 Scoreboard scoreboard = new Scoreboard();
                 scoreboard.besteStudenten();
             } else if (invoer == 6) {
-                System.out.println("Van welke student wilt u het examen inzien? (Vul een studentnummer in)");
+                System.out.println("Van welke student wilt u de gehaalde examens inzien? (Vul een studentnummer in)");
                 int input = scanner.nextInt();
                 scanner.nextLine();
                 Student student1 = JSON.getStudent(input);
@@ -103,6 +103,7 @@ public class Main {
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
                 //welke student heeft de meeste examens gehaald?
+                student.meesteExamens();
             } else if (invoer == 8) {
                 //uitschrijven student
                 scanner.nextLine();
