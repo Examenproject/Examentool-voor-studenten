@@ -49,10 +49,9 @@ public class Student {
     public void gemaaktExamen() {
         ArrayList<GemaaktExamen> gemaaktExamen = JSON.getGemaakteExamens(studentNummer);
         for (GemaaktExamen gemaaktExamen1 : gemaaktExamen) {
-            System.out.println(gemaaktExamen1.getExamenNaam());
-            System.out.println(gemaaktExamen1.getCijfer());
+            
             if (gemaaktExamen1.isGeslaagd()) {
-                System.out.println(gemaaktExamen1.getExamenNaam());
+                System.out.printf("%s is gehaald met het cijfer : %.1f.\n",gemaaktExamen1.getExamenNaam(),gemaaktExamen1.getCijfer());
             }
         }
     }
