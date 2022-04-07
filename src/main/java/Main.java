@@ -95,6 +95,8 @@ public class Main {
                 Scoreboard scoreboard = new Scoreboard();
                 scoreboard.besteStudenten();
             } else if (invoer == 6) {
+                Student gemaaktExamen = new Student(student.getNaam(), student.getAchterNaam(), student.getGehaaldeExamens(), student.getGehaaldeExamens(), student.getExamens(), student.getGemiddelde());
+                student.gemaaktExamen();
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
                 //welke student heeft de meeste examens gehaald?

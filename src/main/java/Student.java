@@ -45,4 +45,15 @@ public class Student {
     public String getWachtwoord() {
         return wachtwoord;
     }
+
+    public void gemaaktExamen() {
+        ArrayList<GemaaktExamen> gemaaktExamen = JSON.getGemaakteExamens(studentNummer);
+        for (GemaaktExamen gemaaktExamen1 : gemaaktExamen) {
+            System.out.println(gemaaktExamen1.getExamenNaam());
+            System.out.println(gemaaktExamen1.getCijfer());
+            if (gemaaktExamen1.isGeslaagd()) {
+                System.out.println(gemaaktExamen1.getExamenNaam());
+            }
+        }
+    }
 }
