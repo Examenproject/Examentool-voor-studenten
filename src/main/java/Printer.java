@@ -3,6 +3,16 @@ import java.util.Scanner;
 
 public class Printer {
 
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     public static void Inloggen() {
         System.out.println("=================================\n" +
                 "\n" +
@@ -26,14 +36,14 @@ public class Printer {
     }
 
     public static void Hoofdmenu() {
-        System.out.println("" +
+        System.out.println("" + ANSI_RED +
                 "███████╗██╗░░██╗░█████╗░███╗░░░███╗███████╗███╗░░██╗████████╗░█████╗░░█████╗░██╗░░░░░\n" +
                 "██╔════╝╚██╗██╔╝██╔══██╗████╗░████║██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░\n" +
                 "█████╗░░░╚███╔╝░███████║██╔████╔██║█████╗░░██╔██╗██║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" +
                 "██╔══╝░░░██╔██╗░██╔══██║██║╚██╔╝██║██╔══╝░░██║╚████║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" +
                 "███████╗██╔╝╚██╗██║░░██║██║░╚═╝░██║███████╗██║░╚███║░░░██║░░░╚█████╔╝╚█████╔╝███████╗\n" +
                 "╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝\n" +
-                "\n" +
+                "\n" + ANSI_RESET +
                 "=================================\n" +
                 "Hallo, maak een keuze:\n" +
                 "\n" +
@@ -93,7 +103,7 @@ public class Printer {
     }
 
     public static void Award(String naam) {
-        System.out.printf("     _______________\n" +
+        System.out.printf(ANSI_YELLOW + "     _______________\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
                 "    |@@@@|     |####|\n" +
@@ -108,7 +118,7 @@ public class Printer {
                 "    : ~ A W A R D ~ :\n" +
                 "     :  *       *  :\n" +
                 "      `.  * * *  .'\n" +
-                "        `-.....-'\n" +
+                "        `-.....-'\n" + ANSI_RESET +
                 "This award belongs to: " + naam + "\n\n");
     }
 
