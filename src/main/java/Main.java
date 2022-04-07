@@ -73,9 +73,12 @@ public class Main {
             }
 
             invoer = scanner.nextInt();
+            scanner.nextLine();
             if (invoer == 1) {
                 //lijst met examens
                 Printer.Examenlijst();
+
+                Printer.wachtOpGebruiker();
             } else if (invoer == 2) {
                 //lijst met studenten
                 Printer.Studentenlijst();

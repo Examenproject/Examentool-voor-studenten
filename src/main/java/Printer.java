@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Printer {
 
@@ -137,5 +138,11 @@ public class Printer {
         }
         System.out.printf("=================================\n" +
                 "examen %s gehaald met een  %.1f\n" + "exit\n", gehaaldTekst, cijfer);
+    }
+
+    public static void wachtOpGebruiker() {
+        System.out.println("\n\nDruk op Enter om het keuzemenu te openen");
+        Scanner s = new Scanner(System.in);
+        s.nextLine();
     }
 }
