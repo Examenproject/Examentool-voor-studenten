@@ -84,4 +84,13 @@ public class Student {
         Student student1 = JSON.getStudent(input);
         student1.gemaaktExamen();
     }
+    public static void uitschrijven(Student student){
+        Scanner scanner = new Scanner(System.in);
+        Printer.Uitschrijven();
+        String wachtwoordInput = scanner.nextLine();
+        if (JSON.studentLogin(student.getStudentNummer(), wachtwoordInput)) {
+            JSON.removeStudent(student.getStudentNummer());
+            System.exit(0);
+        }
+    }
 }

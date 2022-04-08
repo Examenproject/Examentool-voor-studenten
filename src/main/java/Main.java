@@ -90,12 +90,7 @@ public class Main {
                 Printer.wachtOpGebruiker();
             } else if (invoer == 8) {
                 //uitschrijven student
-                Printer.Uitschrijven();
-                String wachtwoordInput = scanner.nextLine();
-                if (JSON.studentLogin(student.getStudentNummer(), wachtwoordInput)) {
-                    JSON.removeStudent(student.getStudentNummer());
-                    System.exit(0);
-                }
+                Student.uitschrijven(student);
 
             } else if (invoer == 9) {
                 //exit
