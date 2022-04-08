@@ -61,10 +61,12 @@ public class Main {
             } else if (invoer == 2) {
                 //lijst met studenten
                 Printer.Studentenlijst();
+                Printer.wachtOpGebruiker();
             } else if (invoer == 3) {
                 //examen maken
                 ExamenAfnemen examenAfnemen = new ExamenAfnemen(student);
                 examenAfnemen.maakExamen();
+                Printer.wachtOpGebruiker();
             } else if (invoer == 4) {
                 //examen inzien
                 System.out.println("Welk examen wil je inzien?");
@@ -72,20 +74,24 @@ public class Main {
                 int examenNummer = scanner.nextInt();
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
+                Printer.wachtOpGebruiker();
             } else if (invoer == 5) {
                 //lijst met beste studenten SCOREBOARD
                 Scoreboard scoreboard = new Scoreboard();
                 scoreboard.besteStudenten();
+                Printer.wachtOpGebruiker();
             } else if (invoer == 6) {
                 System.out.println("Van welke student wilt u de gehaalde examens inzien? (Vul een studentnummer in)");
                 int input = scanner.nextInt();
                 scanner.nextLine();
                 Student student1 = JSON.getStudent(input);
                 student1.gemaaktExamen();
+                Printer.wachtOpGebruiker();
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
                 //welke student heeft de meeste examens gehaald?
                 student.meesteExamens();
+                Printer.wachtOpGebruiker();
             } else if (invoer == 8) {
                 //uitschrijven student
                 Printer.Uitschrijven();
