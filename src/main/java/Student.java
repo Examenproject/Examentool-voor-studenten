@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Student {
     private String naam;
@@ -74,5 +75,13 @@ public class Student {
         for(Student student : studenten){
             System.out.printf("%s heeft %d examens gehaald met een gemiddelde van %.1f.\n", student.getNaam(), student.getGehaaldeExamens(), student.getGemiddelde());
         }
+    }
+    public static void gemaakteExamens(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Van welke student wilt u de gehaalde examens inzien? (Vul een studentnummer in)");
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        Student student1 = JSON.getStudent(input);
+        student1.gemaaktExamen();
     }
 }

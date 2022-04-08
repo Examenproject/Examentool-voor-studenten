@@ -81,11 +81,7 @@ public class Main {
                 scoreboard.besteStudenten();
                 Printer.wachtOpGebruiker();
             } else if (invoer == 6) {
-                System.out.println("Van welke student wilt u de gehaalde examens inzien? (Vul een studentnummer in)");
-                int input = scanner.nextInt();
-                scanner.nextLine();
-                Student student1 = JSON.getStudent(input);
-                student1.gemaaktExamen();
+                Student.gemaakteExamens();
                 Printer.wachtOpGebruiker();
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
