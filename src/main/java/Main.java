@@ -38,15 +38,17 @@ public class Main {
 
         if ("aanmelden".equalsIgnoreCase(firstInput)) {
             Printer.Registreren();
-            String naamInput = scanner.nextLine();
+            student = Inloggen.aanmelden();
+            /*String naamInput = scanner.nextLine();
             String achternaamInput = scanner.nextLine();
             String wachtwoordInput = scanner.nextLine();
 
             studentNummer = JSON.addStudent(naamInput, achternaamInput, wachtwoordInput);
-            student = JSON.getStudent(studentNummer);
+            student = JSON.getStudent(studentNummer);*/
         } else {
+            student = Inloggen.inloggen(firstInput);
             //input is a number
-            studentNummer = Integer.parseInt(firstInput);
+            /*studentNummer = Integer.parseInt(firstInput);
             String wachtwoordInput = scanner.nextLine();
 
             boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
@@ -61,7 +63,7 @@ public class Main {
                 isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
             }
 
-            student = JSON.getStudent(studentNummer);
+            student = JSON.getStudent(studentNummer);*/
         }
 
         //print het hoofdmenu uit met alle opties
