@@ -15,7 +15,7 @@ public class Printer {
 
     public static void Inloggen() {
         System.out.println("=================================\n" +
-                "\n" +
+                "\n" + ANSI_CYAN +
                 "Inloggen:\n" +
                 "\n" +
                 "Geef eerst uw studentennummer en daarna het wachtwoord\n" +
@@ -23,28 +23,28 @@ public class Printer {
                 "- *Het studentennummer is minimaal \uD835\uDFF4 cijfers lang en is uniek*\n" +
                 "\n" +
                 "Nog geen account? Type \"aanmelden\" om een account toe te voegen\n" +
-                "\n" +
+                "\n" + ANSI_RESET +
                 "=================================");
     }
 
     public static void Registreren() {
         System.out.println("=================================\n" +
-                "\n" +
+                "\n" + ANSI_CYAN +
                 "Geef uw naam, achternaam en daarna het wachtwoord wat u wilt gebruiken. Druk op Enter na het invoeren van elke waarde.\n" +
-                "\n" +
+                "\n" + ANSI_RESET +
                 "=================================");
     }
 
     public static void Hoofdmenu() {
-        System.out.println("" + ANSI_RED +
-                "███████╗██╗░░██╗░█████╗░███╗░░░███╗███████╗███╗░░██╗████████╗░█████╗░░█████╗░██╗░░░░░\n" +
-                "██╔════╝╚██╗██╔╝██╔══██╗████╗░████║██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░\n" +
-                "█████╗░░░╚███╔╝░███████║██╔████╔██║█████╗░░██╔██╗██║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" +
-                "██╔══╝░░░██╔██╗░██╔══██║██║╚██╔╝██║██╔══╝░░██║╚████║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" +
-                "███████╗██╔╝╚██╗██║░░██║██║░╚═╝░██║███████╗██║░╚███║░░░██║░░░╚█████╔╝╚█████╔╝███████╗\n" +
+        System.out.println("" + ANSI_GREEN +
+                "███████╗██╗░░██╗░█████╗░███╗░░░███╗███████╗███╗░░██╗████████╗░█████╗░░█████╗░██╗░░░░░\n" + ANSI_BLUE +
+                "██╔════╝╚██╗██╔╝██╔══██╗████╗░████║██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░\n" + ANSI_GREEN +
+                "█████╗░░░╚███╔╝░███████║██╔████╔██║█████╗░░██╔██╗██║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" + ANSI_BLUE +
+                "██╔══╝░░░██╔██╗░██╔══██║██║╚██╔╝██║██╔══╝░░██║╚████║░░░██║░░░██║░░██║██║░░██║██║░░░░░\n" + ANSI_GREEN +
+                "███████╗██╔╝╚██╗██║░░██║██║░╚═╝░██║███████╗██║░╚███║░░░██║░░░╚█████╔╝╚█████╔╝███████╗\n" + ANSI_BLUE +
                 "╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝\n" +
                 "\n" + ANSI_RESET +
-                "=================================\n" +
+                "=================================\n" + ANSI_PURPLE + "\n" +
                 "Hallo, maak een keuze:\n" +
                 "\n" +
                 "1. Lijst met examens\n" +
@@ -56,11 +56,11 @@ public class Printer {
                 "7. Welke student heeft de meeste examens gehaald\n"+
                 "8. Uitschrijven student\n" +
                 "9. Programma beëindigen\n" +
-                "\n" +
+                "\n" + ANSI_RESET +
                 "=================================");
     }
     public static void simpelHoofdMenu(){
-        System.out.println("=================================\n" +
+        System.out.println(ANSI_CYAN + "=================================\n" +
                 "Hallo, maak een keuze:\n" +
                 "\n" +
                 "1. Lijst met examens\n" +
@@ -71,8 +71,7 @@ public class Printer {
                 "6. Welke examens heeft een student gehaald\n" +
                 "7. Welke student heeft de meeste examens gehaald\n"+
                 "8. Uitschrijven student\n" +
-                "9. Programma beëindigen\n" +
-                "\n" +
+                "9. Programma beëindigen\n" + ANSI_RESET + "\n" +
                 "=================================");
     }
 
@@ -85,9 +84,9 @@ public class Printer {
     }
     public static void getGemaakteExamens(ArrayList<GemaaktExamen> gemaaktExamens){
         for(GemaaktExamen gemaaktExamen : gemaaktExamens){
-            System.out.println("ID: " + gemaaktExamen.getId());
-            System.out.println("Naam : " + gemaaktExamen.getExamenNaam());
-            System.out.println("Datum : " + gemaaktExamen.getDate());
+            System.out.println(ANSI_RED + "ID: " + gemaaktExamen.getId());
+            System.out.println(ANSI_YELLOW + "Naam : " + gemaaktExamen.getExamenNaam());
+            System.out.println(ANSI_BLUE + "Datum : " + gemaaktExamen.getDate());
             System.out.println("============================");
         }
     }
