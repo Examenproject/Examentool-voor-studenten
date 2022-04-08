@@ -265,8 +265,19 @@ public class JSON {
         newExamen.put("vragen", examenVragen);
 
 
+        int count = 0;
+        ArrayList<GemaaktExamen> gemaakteExamens = getGemaakteExamens(studentNummer);
+
+        for(GemaaktExamen gExamen: gemaakteExamens){
+            if(gExamen.getUniekExamenId() == examenID){
+                count++;
+            }
+        }
+
+        count++;
+
         //EDIT THIS
-        newExamen.put("poging", 0);
+        newExamen.put("poging", count);
         newExamen.put("cijfer", cijfer);
 
 

@@ -42,11 +42,13 @@ public class Main {
             } else if (invoer == 2) {
                 //lijst met studenten
                 Printer.Studentenlijst();
+
                 Printer.wachtOpGebruiker();
             } else if (invoer == 3) {
                 //examen maken
                 ExamenAfnemen examenAfnemen = new ExamenAfnemen(student);
                 examenAfnemen.maakExamen();
+
                 Printer.wachtOpGebruiker();
             } else if (invoer == 4) {
                 //examen inzien
@@ -55,14 +57,17 @@ public class Main {
                 int examenNummer = scanner.nextInt();
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
+
                 Printer.wachtOpGebruiker();
             } else if (invoer == 5) {
                 //lijst met beste studenten SCOREBOARD
                 Scoreboard scoreboard = new Scoreboard();
                 scoreboard.besteStudenten();
+
                 Printer.wachtOpGebruiker();
             } else if (invoer == 6) {
                 Student.gemaakteExamens();
+
                 Printer.wachtOpGebruiker();
                 //welke examens heeft een student gehaald?
             } else if (invoer == 7) {
