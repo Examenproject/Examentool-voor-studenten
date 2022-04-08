@@ -39,31 +39,8 @@ public class Main {
         if ("aanmelden".equalsIgnoreCase(firstInput)) {
             Printer.Registreren();
             student = Inloggen.aanmelden();
-            /*String naamInput = scanner.nextLine();
-            String achternaamInput = scanner.nextLine();
-            String wachtwoordInput = scanner.nextLine();
-
-            studentNummer = JSON.addStudent(naamInput, achternaamInput, wachtwoordInput);
-            student = JSON.getStudent(studentNummer);*/
         } else {
             student = Inloggen.inloggen(firstInput);
-            //input is a number
-            /*studentNummer = Integer.parseInt(firstInput);
-            String wachtwoordInput = scanner.nextLine();
-
-            boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
-
-            while (!isIngelogd) {
-                System.out.println("Incorrecte validatie. Vul je studentnummer en wachtwoord opnieuw in.");
-                studentNummer = scanner.nextInt();
-                scanner.nextLine();
-
-                wachtwoordInput = scanner.nextLine();
-
-                isIngelogd = JSON.studentLogin(studentNummer, wachtwoordInput);
-            }
-
-            student = JSON.getStudent(studentNummer);*/
         }
 
         //print het hoofdmenu uit met alle opties
@@ -111,7 +88,6 @@ public class Main {
                 student.meesteExamens();
             } else if (invoer == 8) {
                 //uitschrijven student
-                scanner.nextLine();
                 Printer.Uitschrijven();
                 String wachtwoordInput = scanner.nextLine();
                 if (JSON.studentLogin(student.getStudentNummer(), wachtwoordInput)) {
