@@ -21,6 +21,7 @@ public class JSON {
             return 0;
         }
     }
+
     // Leest complete .json file uit en returned dit als een array.
     public static JSONArray readFile(String path) {
         JSONParser jsonParser = new JSONParser();
@@ -45,16 +46,18 @@ public class JSON {
             e.printStackTrace();
         }
     }
-    public static ArrayList<Student> getStudenten(){
+
+    public static ArrayList<Student> getStudenten() {
         JSONArray studenten = readFile("studenten");
         ArrayList<Student> lijstMetStudenten = new ArrayList<>();
-        for(Object student : studenten){
+        for (Object student : studenten) {
             JSONObject jsonObject = (JSONObject) student;
 
             lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer"))), (double) jsonObject.get("gemiddelde")));
         }
         return lijstMetStudenten;
     }
+
     //Get alle studenten die een examen hebben gemaakt. Als input geef je het unieke examenID uit examens.json
     public static ArrayList<Student> getStudenten(int examenId) {
         JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
@@ -241,7 +244,7 @@ public class JSON {
 
         JSONArray examenVragen = new JSONArray();
 
-        for(Vraag vraag: vragen){
+        for (Vraag vraag : vragen) {
             JSONObject vraagObject = new JSONObject();
             vraagObject.put("vraag", vraag.getVraag());
             vraagObject.put("antwoord", vraag.getAntwoord());
@@ -366,7 +369,6 @@ public class JSON {
         JSONArray studenten = readFile("studenten");
 
 
-
         ArrayList<Student> returnArray = new ArrayList<>();
 
         for (Object student : studenten) { // Gaat alle studenten in de studenten file langs.
@@ -389,6 +391,7 @@ public class JSON {
         }
         return null;
     }
+
     public static GemaaktExamen getExamenAntwoordenObject(int uniekId) {
         JSONArray examenAntwoorden = readFile("examenAntwoorden");
 

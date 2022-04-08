@@ -11,9 +11,6 @@ public class Examen {
     private int examenId;// dit is de unieke id uit examens.json
     private int totaalVragen;
     private ArrayList<Vraag> vragen = new ArrayList<>();
-    static Scanner scanner = new Scanner(System.in);
-
-
 
     public Examen(int examenId) {
         this.examenId = examenId;
@@ -47,15 +44,6 @@ public class Examen {
     public ArrayList<Vraag> getVragen() {
         return vragen;
     }
-
-    public int getTotaalVragen() {
-        return totaalVragen;
-    }
-
-    public int getExamenId() {
-        return examenId;
-    }
-
 }
 
 

@@ -10,12 +10,10 @@ public class ExamenAfnemen {
     double goed = 0;
     int fout = 0;
     private ArrayList<Vraag> randomVragen;
-    boolean geslaagd;
     int uniekExamenID;
     int studentNummer;
 
     public ExamenAfnemen(Student student) {
-
         studentNummer = student.getStudentNummer();
     }
 
@@ -38,7 +36,7 @@ public class ExamenAfnemen {
         Examen examen = JSON.getExamenObject(input);
         ArrayList<Vraag> examenVragen = examen.getVragen();
 
-        randomVragen = new ArrayList<Vraag>();
+        randomVragen = new ArrayList<>();
 
         Collections.shuffle(examenVragen);
 
@@ -72,11 +70,13 @@ public class ExamenAfnemen {
 
 
     public void berekenCijfer(ArrayList<Vraag> vragenlijst) {
-        // 9 * S / L +N = Cijfer    <--- formule cijfer berekenen
+        // 9 * S / L +N = Cijfer
         Double cijfer = 9.0 * goed / randomVragen.size() + 1.0;
         int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst, cijfer);
+
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
+
         JSON.updateStudent(studentNummer,gemaaktExamenID, uniekExamenID);
 
     }

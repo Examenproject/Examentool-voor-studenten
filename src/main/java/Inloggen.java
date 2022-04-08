@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Inloggen {
     static Scanner scanner = new Scanner(System.in);
+
     public static Student aanmelden() {
         Student student;
         int studentNummer = 0;
@@ -13,8 +14,9 @@ public class Inloggen {
         student = JSON.getStudent(studentNummer);
         return student;
     }
-        //input is a number
-    public static Student inloggen(String firstInput){
+
+    //input is a number
+    public static Student inloggen(String firstInput) {
         int studentNummer = Integer.parseInt(firstInput);
         String wachtwoordInput = scanner.nextLine();
 

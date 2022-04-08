@@ -38,9 +38,6 @@ public class GemaaktExamen {
             this.geslaagd = false;
         }
 
-
-
-
         JSONArray vragenJsonArray = (JSONArray) examenObject.get("vragen");
 
         for(Object vraagJson: vragenJsonArray){
@@ -84,10 +81,6 @@ public class GemaaktExamen {
 
     public int getId() {
         return id;
-    }
-
-    public int getTotaalVragen() {
-        return totaalVragen;
     }
 
     public ArrayList<Vraag> getVragen() {

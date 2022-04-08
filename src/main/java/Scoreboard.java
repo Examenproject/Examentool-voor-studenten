@@ -3,7 +3,6 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Scoreboard {
-
     public void besteStudenten() {
         ArrayList<Student> studenten = JSON.getStudentList();
 

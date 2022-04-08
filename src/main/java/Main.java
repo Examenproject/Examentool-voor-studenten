@@ -7,23 +7,6 @@ public class Main {
     public static Student student;
 
     public static void main(String[] args) {
-        //login system maken die een User object returned
-        //user object assignen naar Student
-
-        //loopen door elke gemaakte examen en dit ook assignen aan de Student met Examen Obejcts.
-        //user.getGemaaktExamen();
-
-        //Alle opties laten zien
-        //Interface laten zien
-
-        //vragen om input en het proces starten
-        //Printer.Inloggen();
-        //Scanner scanner = new Scanner(System.in);
-        //String input = scanner.nextLine();
-        //Printer.Examenlijst();
-
-        //ExamenAfnemen.stelVraag(ArrayList<String>);
-
         Student student = null;
 
         Scanner scanner = new Scanner(System.in);
@@ -33,8 +16,6 @@ public class Main {
 
         //kan een nummer zijn of "aanmelden"
         String firstInput = scanner.nextLine();
-
-        int studentNummer = 0;
 
         if ("aanmelden".equalsIgnoreCase(firstInput)) {
             Printer.Registreren();
@@ -87,6 +68,7 @@ public class Main {
             } else if (invoer == 7) {
                 //welke student heeft de meeste examens gehaald?
                 student.meesteExamens();
+
                 Printer.wachtOpGebruiker();
             } else if (invoer == 8) {
                 //uitschrijven student

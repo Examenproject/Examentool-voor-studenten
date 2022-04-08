@@ -87,6 +87,7 @@ public class Printer {
         for(GemaaktExamen gemaaktExamen : gemaaktExamens){
             System.out.println("ID: " + gemaaktExamen.getId());
             System.out.println("Naam : " + gemaaktExamen.getExamenNaam());
+            System.out.println("Datum : " + gemaaktExamen.getDate());
             System.out.println("============================");
         }
     }
