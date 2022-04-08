@@ -20,7 +20,7 @@ public class Printer {
                 "\n" +
                 "Geef eerst uw studentennummer en daarna het wachtwoord\n" +
                 "\n" +
-                "- *Het studentennummer is minimaal \uD835\uDFF4 cijfers lang en is uniek*\n" +
+                " *Het studentennummer is minimaal \uD835\uDFF4 cijfers lang en is uniek*\n" +
                 "\n" +
                 "Nog geen account? Type \"aanmelden\" om een account toe te voegen\n" +
                 "\n" + ANSI_RESET +
@@ -98,7 +98,7 @@ public class Printer {
         for (int  i = 0;  i < JSON.getStudentList().size();  i++) {
             naam = JSON.getStudentList().get(i).getNaam();
             studentennummer = JSON.getStudentList().get(i).getStudentNummer();
-            System.out.printf("Naam:%s\nStudentennummer:%d\n\n",naam ,studentennummer);
+            System.out.printf(ANSI_YELLOW + "Naam:%s\nStudentennummer:%d\n\n",naam ,studentennummer);
         }
     }
 
@@ -129,7 +129,7 @@ public class Printer {
 
     public static void Uitschrijven() {
         System.out.printf("=================================\n" +
-                "Voer uw wachtwoord in als u zich wilt uitschrijven\n" +
+                ANSI_RED + "Voer uw wachtwoord in als u zich wilt uitschrijven\n" + ANSI_RESET +
                 "=================================");
     }
 
@@ -142,16 +142,16 @@ public class Printer {
     public static void Gehaald(Boolean gehaald, double cijfer) {
         String gehaaldTekst;
         if (gehaald) {
-            gehaaldTekst = "wel";
+            gehaaldTekst = ANSI_GREEN + "wel" + ANSI_RESET;
         } else {
-            gehaaldTekst = "niet";
+            gehaaldTekst = ANSI_RED + "niet" + ANSI_RESET;
         }
         System.out.printf("=================================\n" +
-                "examen %s gehaald met een  %.1f\n" + "exit\n", gehaaldTekst, cijfer);
+                ANSI_GREEN + "examen %s gehaald met een  %.1f\n" + ANSI_RESET + "exit\n", gehaaldTekst, cijfer);
     }
 
     public static void wachtOpGebruiker() {
-        System.out.println("\n\nDruk op Enter om het keuzemenu te openen");
+        System.out.println(ANSI_PURPLE + "\n\nDruk op Enter om het keuzemenu te openen");
         Scanner s = new Scanner(System.in);
         s.nextLine();
     }
