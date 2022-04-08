@@ -51,6 +51,7 @@ public class GemaaktExamen {
             vragen.add(new Vraag(vraag, antwoord, studentAntwoord, punten));
         }
     }
+
     public void examenInzien(){
         Scanner scanner = new Scanner(System.in);
         int teller = 0;
