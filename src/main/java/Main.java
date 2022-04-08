@@ -70,7 +70,7 @@ public class Main {
             } else if (invoer == 4) {
                 //examen inzien
                 System.out.println("Welk examen wil je inzien?");
-                Printer.getGemaakteExamens(JSON.getGemaakteExamens(studentNummer));
+                Printer.getGemaakteExamens(JSON.getGemaakteExamens(student.getStudentNummer()));
                 int examenNummer = scanner.nextInt();
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
