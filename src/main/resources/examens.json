@@ -11,21 +11,21 @@
         "punten": 1
       },
       {
-        "vraag": "Gus koopt een banaan van 0,60€ per stuk, twee peren van 0,45€ per stuk en acht kersen van 0,15€ per stuk. Gus rekent af bij de kassa met 10 euro. Hoeveel geld krijgt hij terug?\n",
+        "vraag": "Gus koopt een banaan van 0,60€ per stuk,\n twee peren van 0,45€ per stuk en acht kersen van 0,15€ per stuk. \nGus rekent af bij de kassa met 10 euro. \nHoeveel geld krijgt hij terug?\n",
         "id": 2,
-        "antwoord": "7.30",
+        "antwoord": "7,30",
         "punten": 1
       },
       {
         "vraag": "Karel heeft een kilo rozijnen(1000 gram). Hij wilt de rozijnen inpakken in kleine pakjes van 32 gram. Hoeveel pakjes rozijnen kan Karel vullen?\n",
         "id": 3,
-        "antwoord": "31 pakjes rozijnen",
+        "antwoord": "31",
         "punten": 1
       },
       {
         "vraag": "Walter wilt graag zijn appels in kratten vullen van 20 kilo. Hoeveel kratten appels zou Walter kunnen vullen met 1 ton appels?\n",
         "id": 4,
-        "antwoord": "50 kratten appels",
+        "antwoord": "50",
         "punten": 1
       },
       {
@@ -43,73 +43,73 @@
       {
         "vraag": "Jane kan in een minuut 42 meter lopen. Hoeveel meter kan ze lopen in een uur?\n",
         "id": 7,
-        "antwoord": "2520 meter",
+        "antwoord": "2520",
         "punten": 1
       },
       {
         "vraag": "Er zijn in 2015 34200 Baby Blue phones verkocht. 63% daarvan waren blauw. hoeveel blauwe baby blue phones zijn er verkocht?\n",
         "id": 8,
-        "antwoord": "21546 baby blue-phones",
+        "antwoord": "21546",
         "punten": 1
       },
       {
         "vraag": "Mike moet voor zijn auto-verzekering 321 euro betalen. De prijs is door inflatie met 5,4% gestegen sinds het afgelopen jaar. Hoeveel betaalde Mike in het afgelopen jaar voor zijn auto-verzekering?\n",
         "id": 9,
-        "antwoord": "303,67 euro",
+        "antwoord": "303,67",
         "punten": 1
       },
       {
         "vraag": "Hector is 10 jaar gestopt met roken. Hij rookte in het verleden 15 sigaretten op een dag. In een pak sigaretten zitten 20 sigaretten. Een pak kost 7 euro. Hoeveel geld heeft Hector bespaard in de afgelopen 10 jaar door te stoppen met roken?",
         "id": 10,
-        "antwoord": "19162,50 euro",
+        "antwoord": "19162,50",
         "punten": 1
       },
       {
         "vraag": "Saul wilt graag benzine tanken. Hij tankt 60 liter benzine voor 4 euro per liter. Hoeveel moet hij betalen?",
         "id": 11,
-        "antwoord": "240 euro",
+        "antwoord": "240",
         "punten": 1
       },
       {
         "vraag": "Tuco wilt graag met zijn twee neefjes naar het concert van zijn favoriete band Dream Theater. Een volwassenen ticket kost 70€. Kinderen krijgen 20€ korting. Verder kopen ze voor het concert allemaal een frisdrankje van 2,50€. Tuco betaald heel de dag met zijn pinpas waar hij 764 euro op heeft staan. Hoeveel geld houd hij over op zijn pinpas na zijn dagje uit?",
         "id": 12,
-        "antwoord": "586,50 euro",
+        "antwoord": "586,50",
         "punten": 1
       },
       {
         "vraag": "Wat is 312 ÷  4 x 12?\nA. 936\nB. 321\nC. 493\n 542",
         "id": 13,
-        "antwoord": "A. 936",
+        "antwoord": "A",
         "punten": 1
       },
       {
         "vraag": "wat is 7 - 7 x 7 + 7?\nA. 49\n B. 32\n C. 41\n D. 321",
         "id": 14,
-        "antwoord": "A. 49",
+        "antwoord": "A",
         "punten": 1
       },
       {
-        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93 \nB. 74\n C. 14\n D. 13",
+        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93\nB.74\nC. 14\nD. 13",
         "id": 15,
-        "antwoord": "C. 14",
+        "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12",
+        "vraag": "Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12\n",
         "id": 16,
-        "antwoord": "C. 9",
+        "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€. Voor ieder gat in de kaas weegt de kaas 5 gram minder. Hoeveel kost een kaas met 12 gaten?\nA. 3,52€\n B. 3,72€\n C. 4,48€\nD. 5,32€\n",
+        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€.\n Voor ieder gat in de kaas weegt de kaas 5 gram minder. \nHoeveel kost een kaas met 12 gaten?\nA. 3,52€\nB. 3,72€\nC. 4,48€\nD. 5,32€\n",
         "id": 17,
-        "antwoord": "A. 3,52€",
+        "antwoord": "A",
         "punten": 1
       },
       {
         "vraag": "Wat is 20 ÷ 10 ÷ 5 ÷ 2,5?\nA. 0,32\nB. 0,16\nC. 0,64\nD. 2,5\n",
         "id": 18,
-        "antwoord": "B. 0,16",
+        "antwoord": "B",
         "punten": 1
       }
     ]
@@ -169,8 +169,8 @@
       },
       {
         "id": 9,
-        "vraag": "Welke twee landen delen met een grens van bijna 9000km de langste landgrens?\n",
-        "antwoord": "Canada en Verenigde Staten",
+        "vraag": "Is Frankrijk groter dan België?\n",
+        "antwoord": "nee",
         "punten": 1
       },
       {
