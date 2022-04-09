@@ -5,31 +5,31 @@
     "totaalVragen": 10,
     "vragen": [
       {
-        "vraag": "Jesse wilt graag 64 watermeloenen kopen en deze met 8 vrienden delen. Hoeveel watermeloenen krijgt elke vriend?\n",
+        "vraag": "Jesse wilt graag 64 watermeloenen kopen en deze met 8 vrienden delen. Hoeveel watermeloenen krijgt elke vriend?",
         "id": 1,
         "antwoord": "8",
         "punten": 1
       },
       {
-        "vraag": "Gus koopt een banaan van 0,60€ per stuk,\n twee peren van 0,45€ per stuk en acht kersen van 0,15€ per stuk. \nGus rekent af bij de kassa met 10 euro. \nHoeveel geld krijgt hij terug?\n",
+        "vraag": "Gus koopt een banaan van 0,60€ per stuk,\ntwee peren van 0,45€ per stuk en acht kersen van 0,15€ per stuk. \nGus rekent af bij de kassa met 10 euro. \nHoeveel geld krijgt hij terug?",
         "id": 2,
         "antwoord": "7,30",
         "punten": 1
       },
       {
-        "vraag": "Karel heeft een kilo rozijnen(1000 gram). Hij wilt de rozijnen inpakken in kleine pakjes van 32 gram. Hoeveel pakjes rozijnen kan Karel vullen?\n",
+        "vraag": "Karel heeft een kilo rozijnen(1000 gram). Hij wilt de rozijnen inpakken in kleine pakjes van 32 gram. Hoeveel pakjes rozijnen kan Karel vullen?",
         "id": 3,
         "antwoord": "31",
         "punten": 1
       },
       {
-        "vraag": "Walter wilt graag zijn appels in kratten vullen van 20 kilo. Hoeveel kratten appels zou Walter kunnen vullen met 1 ton appels?\n",
+        "vraag": "Walter wilt graag zijn appels in kratten vullen van 20 kilo. Hoeveel kratten appels zou Walter kunnen vullen met 1 ton appels?",
         "id": 4,
         "antwoord": "50",
         "punten": 1
       },
       {
-        "vraag": "Wat is vier gedeeld door twee tot de derde macht?\n",
+        "vraag": "Wat is vier gedeeld door twee tot de derde macht?",
         "id": 5,
         "antwoord": "0.5",
         "punten": 1
@@ -41,19 +41,19 @@
         "punten": 1
       },
       {
-        "vraag": "Jane kan in een minuut 42 meter lopen. Hoeveel meter kan ze lopen in een uur?\n",
+        "vraag": "Jane kan in een minuut 42 meter lopen. Hoeveel meter kan ze lopen in een uur?",
         "id": 7,
         "antwoord": "2520",
         "punten": 1
       },
       {
-        "vraag": "Er zijn in 2015 34200 Baby Blue phones verkocht. 63% daarvan waren blauw. hoeveel blauwe baby blue phones zijn er verkocht?\n",
+        "vraag": "Er zijn in 2015 34200 Baby Blue phones verkocht. 63% daarvan waren blauw. hoeveel blauwe baby blue phones zijn er verkocht?",
         "id": 8,
         "antwoord": "21546",
         "punten": 1
       },
       {
-        "vraag": "Mike moet voor zijn auto-verzekering 321 euro betalen. De prijs is door inflatie met 5,4% gestegen sinds het afgelopen jaar. Hoeveel betaalde Mike in het afgelopen jaar voor zijn auto-verzekering?\n",
+        "vraag": "Mike moet voor zijn auto-verzekering 321 euro betalen. De prijs is door inflatie met 5,4% gestegen sinds het afgelopen jaar. Hoeveel betaalde Mike in het afgelopen jaar voor zijn auto-verzekering?",
         "id": 9,
         "antwoord": "303,67",
         "punten": 1
@@ -77,7 +77,7 @@
         "punten": 1
       },
       {
-        "vraag": "Wat is 312 ÷  4 x 12?\nA. 936\nB. 321\nC. 493\n 542",
+        "vraag": "Wat is 312 ÷  4 x 12?\nA. 936\nB. 321\nC. 493\nD. 542",
         "id": 13,
         "antwoord": "A",
         "punten": 1
@@ -89,25 +89,25 @@
         "punten": 1
       },
       {
-        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93\nB.74\nC. 14\nD. 13",
+        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93\nB. 74\nC. 14\nD. 13",
         "id": 15,
         "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12\n",
+        "vraag": "Wat is 3 + 3!\nA. 6\nB. 4\nC. 9\nD. 12",
         "id": 16,
         "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€.\n Voor ieder gat in de kaas weegt de kaas 5 gram minder. \nHoeveel kost een kaas met 12 gaten?\nA. 3,52€\nB. 3,72€\nC. 4,48€\nD. 5,32€\n",
+        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€.\nVoor ieder gat in de kaas weegt de kaas 5 gram minder.\nHoeveel kost een kaas met 12 gaten?\nA. 3,52€\nB. 3,72€\nC. 4,48€\nD. 5,32€",
         "id": 17,
         "antwoord": "A",
         "punten": 1
       },
       {
-        "vraag": "Wat is 20 ÷ 10 ÷ 5 ÷ 2,5?\nA. 0,32\nB. 0,16\nC. 0,64\nD. 2,5\n",
+        "vraag": "Wat is 20 ÷ 10 ÷ 5 ÷ 2,5?\nA. 0,32\nB. 0,16\nC. 0,64\nD. 2,5",
         "id": 18,
         "antwoord": "B",
         "punten": 1
@@ -121,109 +121,109 @@
     "vragen": [
       {
         "id": 1,
-        "vraag": "Wat is de hoofdstad van Gelderland?\n",
+        "vraag": "Wat is de hoofdstad van Gelderland?",
         "antwoord": "Arnhem",
         "punten": 1
       },
       {
         "id": 2,
-        "vraag": "Loopt de rivier de Rijn door Belgie\nJa\nNee\n",
+        "vraag": "Loopt de rivier de Rijn door Belgie\nJa\nNee",
         "antwoord": "Nee",
         "punten": 1
       },
       {
         "id": 3,
-        "vraag": "Wat is de hoofdstad van Estland?\n",
+        "vraag": "Wat is de hoofdstad van Estland?",
         "antwoord": "B",
         "punten": 1
       },
       {
         "id": 4,
-        "vraag": "Van welk land is Valetta de hoofdstad?\n",
+        "vraag": "Van welk land is Valetta de hoofdstad?",
         "antwoord": "B",
         "punten": 1
       },
       {
         "id": 5,
-        "vraag": "Wat is de oudste continu bewoonde stad ter wereld?\n",
+        "vraag": "Wat is de oudste continu bewoonde stad ter wereld?",
         "antwoord": "Jericho in Palestina",
         "punten": 1
       },
       {
         "id": 6,
-        "vraag": "Wat is de hoofdstad van Ghana?\n",
+        "vraag": "Wat is de hoofdstad van Ghana?",
         "antwoord": "Accra",
         "punten": 1
       },
       {
         "id": 7,
-        "vraag": "Wat is de hoofdstad van Namibië?\n",
+        "vraag": "Wat is de hoofdstad van Namibië?",
         "antwoord": "D",
         "punten": 1
       },
       {
         "id": 8,
-        "vraag": "In welk land ligt het meest noordelijke punt van Afrika?\n",
+        "vraag": "In welk land ligt het meest noordelijke punt van Afrika?",
         "antwoord": "Tunesië",
         "punten": 1
       },
       {
         "id": 9,
-        "vraag": "Is Frankrijk groter dan België?\n",
+        "vraag": "Is Frankrijk groter dan België?",
         "antwoord": "nee",
         "punten": 1
       },
       {
         "id": 10,
-        "vraag": "Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?\n",
+        "vraag": "Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?",
         "antwoord": "Hoofdstad",
         "punten": 1
       },
       {
         "id": 11,
-        "vraag": "Hoe werd Thailand tot 1939 genoemd?\n",
+        "vraag": "Hoe werd Thailand tot 1939 genoemd?",
         "antwoord": "Siam",
         "punten": 1
       },
       {
         "id": 12,
-        "vraag": "Als je de continenten rangschikt van grootste naar kleinste oppervlakte. Welke van deze volgordes klopt dan?\nA. Azië, Afrika, Antarctica, Noord Amerika, Zuid-Amerika, Europa, Australië\nB Azië, Afrika, Zuid-Amerika, Noord Amerika, Antarctica, Australië, Europa\nC Azië, Afrika, Noord Amerika, Zuid-Amerika, Antarctica, Europa, AustraliëD Afrika, Azië, Zuid-Amerika, Antarctica, Noord Amerika,  Europa, Australië\n",
+        "vraag": "Als je de continenten rangschikt van grootste naar kleinste oppervlakte. Welke van deze volgordes klopt dan?\nA. Azië, Afrika, Antarctica, Noord Amerika, Zuid-Amerika, Europa, Australië\nB Azië, Afrika, Zuid-Amerika, Noord Amerika, Antarctica, Australië, Europa\nC Azië, Afrika, Noord Amerika, Zuid-Amerika, Antarctica, Europa, AustraliëD Afrika, Azië, Zuid-Amerika, Antarctica, Noord Amerika,  Europa, Australië",
         "antwoord": "C",
         "punten": 1
       },
       {
         "id": 13,
-        "vraag": "Zuid-Afrika is het enige land ter wereld met 3 hoofdsteden. Welke zijn dat?\nA. Pretoria, Kaapstad, Bloemfontein\nB. Johannesburg, Kaapstad, Bloemfontein\nC. Pretoria, Kaapstad, Johannesburg\nD. Mbombela, Kaapstad, Johannesburg\n",
+        "vraag": "Zuid-Afrika is het enige land ter wereld met 3 hoofdsteden. Welke zijn dat?\nA. Pretoria, Kaapstad, Bloemfontein\nB. Johannesburg, Kaapstad, Bloemfontein\nC. Pretoria, Kaapstad, Johannesburg\nD. Mbombela, Kaapstad, Johannesburg",
         "antwoord": "A",
         "punten": 1
       },
       {
         "id": 14,
-        "vraag": "'Ouagadougou' is de hoofdstad van Burkina Faso.\nJa\nNee\n",
+        "vraag": "'Ouagadougou' is de hoofdstad van Burkina Faso.\nJa\nNee",
         "antwoord": "Ja",
         "punten": 1
       },
       {
         "id": 15,
-        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee\n",
+        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee",
         "antwoord": "Ja",
         "punten": 1
       },
       {
         "id": 16,
-        "vraag": "Is Africa een land?\n",
+        "vraag": "Is Africa een land?",
         "antwoord": "Nee",
         "punten": 1
       },
       {
         "id": 17,
-        "vraag": "Wat is de hoofdstad van Nederland?\n",
+        "vraag": "Wat is de hoofdstad van Nederland?",
         "antwoord": "Amsterdan",
         "punten": 1
       },
       {
         "id": 18,
-        "vraag": "Hoeveel staten zijn er in de Verenigde Staten?\n",
+        "vraag": "Hoeveel staten zijn er in de Verenigde Staten?",
         "antwoord": "50",
         "punten": 1
       }
