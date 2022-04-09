@@ -77,7 +77,7 @@
         "punten": 1
       },
       {
-        "vraag": "Wat is 312 ÷  4 x 12?\nA. 936\nB. 321\nC. 493\n 542",
+        "vraag": "Wat is 312 ÷  4 x 12?\nA. 936\nB. 321\nC. 493\nD. 542",
         "id": 13,
         "antwoord": "A",
         "punten": 1
@@ -89,19 +89,19 @@
         "punten": 1
       },
       {
-        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93\nB.74\nC. 14\nD. 13",
+        "vraag": "Wat zijn de eerste twee getallen achter de komma van Pi?\nA. 93\nB. 74\nC. 14\nD. 13",
         "id": 15,
         "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12\n",
+        "vraag": "Wat is 3 + 3!\nA. 6\nB. 4\nC. 9\nD. 12\n",
         "id": 16,
         "antwoord": "C",
         "punten": 1
       },
       {
-        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€.\n Voor ieder gat in de kaas weegt de kaas 5 gram minder. \nHoeveel kost een kaas met 12 gaten?\nA. 3,52€\nB. 3,72€\nC. 4,48€\nD. 5,32€\n",
+        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00€.\nVoor ieder gat in de kaas weegt de kaas 5 gram minder.\nHoeveel kost een kaas met 12 gaten?\nA. 3,52€\nB. 3,72€\nC. 4,48€\nD. 5,32€\n",
         "id": 17,
         "antwoord": "A",
         "punten": 1
