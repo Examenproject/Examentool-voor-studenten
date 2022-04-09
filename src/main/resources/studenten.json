@@ -1,1 +1,92 @@
-[{"achternaam":"van der Lelij","gemiddelde":1.0,"wachtwoord":"1234","naam":"Karel","nummer":12345678,"gehaaldeExamens":0,"examens":[{"antwoordID":45247275,"examenID":1},{"antwoordID":98137419,"examenID":2}]},{"achternaam":"Ploeg","gemiddelde":0.0,"wachtwoord":"1234","naam":"Marcel","nummer":23456789,"gehaaldeExamens":0,"examens":[]},{"achternaam":"Jansen","gemiddelde":0.0,"wachtwoord":"1234","naam":"Jan","nummer":34567890,"gehaaldeExamens":0,"examens":[]},{"achternaam":"G","gemiddelde":0.0,"wachtwoord":"bruh","naam":"Sidd","nummer":202247486,"gehaaldeExamens":0,"examens":[]}]
+[
+  {
+    "achternaam": "van der Lelij",
+    "gemiddelde": 1.0,
+    "wachtwoord": "1234",
+    "naam": "Karel",
+    "nummer": 12345678,
+    "gehaaldeExamens": 0,
+    "examens": [
+      {
+        "antwoordID": 45247275,
+        "examenID": 1
+      },
+      {
+        "antwoordID": 98137419,
+        "examenID": 2
+      }
+    ]
+  },
+  {
+    "achternaam": "Ploeg",
+    "gemiddelde": 0.0,
+    "wachtwoord": "1234",
+    "naam": "Marcel",
+    "nummer": 23456789,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "Jansen",
+    "gemiddelde": 0.0,
+    "wachtwoord": "1234",
+    "naam": "Jan",
+    "nummer": 34567890,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "G",
+    "gemiddelde": 0.0,
+    "wachtwoord": "bruh",
+    "naam": "Sidd",
+    "nummer": 202247486,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "McTesty",
+    "gemiddelde": 0.0,
+    "wachtwoord": "TestWachtwoord",
+    "naam": "Testy",
+    "nummer": 202242595,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "McTesty",
+    "gemiddelde": 0.0,
+    "wachtwoord": "TestWachtwoord",
+    "naam": "Testy",
+    "nummer": 202213250,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "McTesty",
+    "gemiddelde": 0.0,
+    "wachtwoord": "TestWachtwoord",
+    "naam": "Testy",
+    "nummer": 20220848,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "McTesty",
+    "gemiddelde": 0.0,
+    "wachtwoord": "TestWachtwoord",
+    "naam": "Testy",
+    "nummer": 20223042,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
+    "achternaam": "McTesty",
+    "gemiddelde": 0.0,
+    "wachtwoord": "TestWachtwoord",
+    "naam": "Testy",
+    "nummer": 20225419,
+    "gehaaldeExamens": 0,
+    "examens": []
+  }
+]
