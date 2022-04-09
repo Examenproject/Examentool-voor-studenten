@@ -31,7 +31,7 @@
       {
         "vraag": "Wat is vier gedeeld door twee tot de derde macht?",
         "id": 5,
-        "antwoord": "0.5",
+        "antwoord": "0,5",
         "punten": 1
       },
       {
@@ -127,7 +127,7 @@
       },
       {
         "id": 2,
-        "vraag": "Loopt de rivier de Rijn door Belgie\nJa\nNee",
+        "vraag": "Loopt de rivier de Rijn door België\nJa\nNee",
         "antwoord": "Nee",
         "punten": 1
       },
@@ -139,7 +139,7 @@
       },
       {
         "id": 4,
-        "vraag": "Van welk land is Valetta de hoofdstad?",
+        "vraag": "Van welk land is Valletta de hoofdstad?",
         "antwoord": "B",
         "punten": 1
       },
@@ -218,7 +218,7 @@
       {
         "id": 17,
         "vraag": "Wat is de hoofdstad van Nederland?",
-        "antwoord": "Amsterdan",
+        "antwoord": "Amsterdam",
         "punten": 1
       },
       {
