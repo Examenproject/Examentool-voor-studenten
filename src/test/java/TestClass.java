@@ -30,6 +30,42 @@ public class TestClass {
         Assert.assertEquals(expected, actual, 0.0001);
     }
 
+    @Test
+    public void testStelVraag(){
+        for(int i = 0; i<2; i++){
+            if(i == 0){
+                int goed = 0;
+                int fout = 0;
+                Vraag testVraag = new Vraag("Wat is 1 + 1", "2", null, 1);
+                String antwoord = "2";
+                System.setIn(new ByteArrayInputStream(antwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                String studentAntwoord = scanner.nextLine();
+                if (studentAntwoord.equalsIgnoreCase(testVraag.getAntwoord())) {
+                    goed++;
+                } else {
+                    fout++;
+                }
+                Assert.assertEquals(1, goed);
+            }
+            else if (i == 1){
+                int goed = 0;
+                int fout = 0;
+                Vraag testVraag = new Vraag("Wat is 1 + 1", "2", null, 1);
+                String antwoord = "3";
+                System.setIn(new ByteArrayInputStream(antwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                String studentAntwoord = scanner.nextLine();
+                if (studentAntwoord.equalsIgnoreCase(testVraag.getAntwoord())) {
+                    goed++;
+                } else {
+                    fout++;
+                }
+                Assert.assertEquals(1, fout);
+            }
+        }
+    }
+
 }
 /**Kan examens niet ophalen **/
     /*
