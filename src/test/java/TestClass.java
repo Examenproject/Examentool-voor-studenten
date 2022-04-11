@@ -65,6 +65,43 @@ public class TestClass {
             }
         }
     }
+    @Test
+    public void testInloggen(){
+        for(int i = 0; i<4; i++){
+            if(i==0){
+                int studentNummer = 1234;
+                String wachtwoord = "1234";
+                System.setIn(new ByteArrayInputStream(wachtwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoord);
+                Assert.assertTrue(isIngelogd);
+            }
+            else if(i==1){
+                int studentNummer = 1234;
+                String wachtwoord = "fout";
+                System.setIn(new ByteArrayInputStream(wachtwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoord);
+                Assert.assertFalse(isIngelogd);
+            }
+            else if(i==2){
+                int studentNummer = 10;
+                String wachtwoord = "1234";
+                System.setIn(new ByteArrayInputStream(wachtwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoord);
+                Assert.assertFalse(isIngelogd);
+            }
+            else{
+                int studentNummer = 10;
+                String wachtwoord = "fout";
+                System.setIn(new ByteArrayInputStream(wachtwoord.getBytes()));
+                Scanner scanner = new Scanner(System.in);
+                boolean isIngelogd = JSON.studentLogin(studentNummer, wachtwoord);
+                Assert.assertFalse(isIngelogd);
+            }
+        }
+    }
 
 }
 /**Kan examens niet ophalen **/

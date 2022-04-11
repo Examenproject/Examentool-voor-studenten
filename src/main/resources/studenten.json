@@ -1,5 +1,14 @@
 [
   {
+    "achternaam": "TestClass",
+    "gemiddelde": 0.0,
+    "wachtwoord": "1234",
+    "naam": "TestClass",
+    "nummer": 1234,
+    "gehaaldeExamens": 0,
+    "examens": []
+  },
+  {
     "achternaam": "van der Lelij",
     "gemiddelde": 1.0,
     "wachtwoord": "1234",
