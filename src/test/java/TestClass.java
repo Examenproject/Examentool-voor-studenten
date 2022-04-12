@@ -13,31 +13,32 @@ public class TestClass {
     public void testBerekenCijfer(){
         double goed;
         double expected;
-        ArrayList<Integer> vragenlijst = new ArrayList<>(10);
+        Integer[] vragenlijst = new Integer[10];
         for (int i = 0; i <= 3; i++) {
             if (i == 0){
                 goed = 7;
                 expected = 7.3;
-                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
-                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
+
+                Assert.assertEquals(expected, cijfer,0.0001);
             }
             else if (i == 1){
                 goed = 9;
                 expected = 9.1;
-                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
-                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
+                Assert.assertEquals(expected, cijfer,0.0001);
             }
             else if (i == 2){
                 goed = 10;
                 expected = 10;
-                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
-                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
+                Assert.assertEquals(expected, cijfer,0.0001);
             }
             else if(i == 3){
                 goed = 3;
                 expected = 3.7;
-                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
-                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
+                Assert.assertEquals(expected, cijfer,0.0001);
             }
 
         }
