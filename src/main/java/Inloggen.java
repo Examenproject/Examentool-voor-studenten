@@ -10,12 +10,13 @@ public class Inloggen {
         String achternaamInput = scanner.nextLine();
         String wachtwoordInput = scanner.nextLine();
 
+        //genereer een nieuw student met de naam, achternaam en wachtwoord
         studentNummer = JSON.addStudent(naamInput, achternaamInput, wachtwoordInput);
         student = JSON.getStudent(studentNummer);
         return student;
     }
 
-    //input is a number
+
     public static Student inloggen(String firstInput) {
         int studentNummer = Integer.parseInt(firstInput);
         String wachtwoordInput = scanner.nextLine();

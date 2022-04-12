@@ -18,6 +18,7 @@ public class Main {
         String firstInput = scanner.nextLine();
 
         if ("aanmelden".equalsIgnoreCase(firstInput)) {
+            //start het aanmelden proces
             Printer.Registreren();
             student = Inloggen.aanmelden();
         } else {
@@ -27,6 +28,7 @@ public class Main {
         //print het hoofdmenu uit met alle opties
         int invoer = -1;
         Printer.Hoofdmenu();
+
         while (invoer != 9) {
             if (invoer != -1) {
                 Printer.simpelHoofdMenu();
@@ -34,6 +36,7 @@ public class Main {
 
             invoer = scanner.nextInt();
             scanner.nextLine();
+
             if (invoer == 1) {
                 //lijst met examens
                 Printer.Examenlijst();
@@ -45,7 +48,7 @@ public class Main {
 
                 Printer.wachtOpGebruiker();
             } else if (invoer == 3) {
-                //examen maken
+                //examen afnemen
                 ExamenAfnemen examenAfnemen = new ExamenAfnemen(student);
                 examenAfnemen.maakExamen();
 
@@ -54,28 +57,29 @@ public class Main {
                 //examen inzien
                 System.out.println("Welk examen wil je inzien?");
                 Printer.getGemaakteExamens(JSON.getGemaakteExamens(student.getStudentNummer()));
+
                 int examenNummer = scanner.nextInt();
                 GemaaktExamen gemaaktExamen = new GemaaktExamen(examenNummer);
                 gemaaktExamen.examenInzien();
 
                 Printer.wachtOpGebruiker();
             } else if (invoer == 5) {
-                //lijst met beste studenten SCOREBOARD
+                //lijst met beste studenten
                 Scoreboard scoreboard = new Scoreboard();
                 scoreboard.besteStudenten();
 
                 Printer.wachtOpGebruiker();
             } else if (invoer == 6) {
+                //welke examens heeft een student gehaald?
                 Student.gemaakteExamens();
 
                 Printer.wachtOpGebruiker();
-                //welke examens heeft een student gehaald?
-            } else if (invoer == 7) {
-                //welke student heeft de meeste examens gehaald?
-                student.meesteExamens();
-
+            }else if (invoer == 7) {
+                //Controleer of een student geslaagd is voor een examen
+                Student.controleerGeslaagdVoorExamen();
                 Printer.wachtOpGebruiker();
-            } else if (invoer == 8) {
+            }
+            else if (invoer == 8) {
                 //uitschrijven student
                 Student.uitschrijven(student);
 

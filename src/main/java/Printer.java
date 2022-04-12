@@ -53,7 +53,7 @@ public class Printer {
                 "4. Examen inzien\n" +
                 "5. Beste studenten\n" +
                 "6. Welke examens heeft een student gehaald\n" +
-                "7. Welke student heeft de meeste examens gehaald\n"+
+                "7. Controleer of een student geslaagd is voor een examen\n" +
                 "8. Uitschrijven student\n" +
                 "9. Programma beëindigen\n" +
                 "\n" + ANSI_RESET +
@@ -69,7 +69,7 @@ public class Printer {
                 "4. Examen inzien\n" +
                 "5. Beste studenten\n" +
                 "6. Welke examens heeft een student gehaald\n" +
-                "7. Welke student heeft de meeste examens gehaald\n"+
+                "7. Controleer of een student geslaagd is voor een examen\n" +
                 "8. Uitschrijven student\n" +
                 "9. Programma beëindigen\n" + ANSI_RESET + "\n" +
                 "=================================");
@@ -79,7 +79,7 @@ public class Printer {
         System.out.printf("=================================\n"+"Examenlijst: \n"+"\n");
         for (int  i = 0;  i < JSON.getExamList().size();  i++) {
             String examen = JSON.getExamList().get(i).getNaam();
-            System.out.printf("%s\n", examen);
+            System.out.printf("%d. %s\n", i + 1, examen);
         }
     }
     public static void getGemaakteExamens(ArrayList<GemaaktExamen> gemaaktExamens){
@@ -93,12 +93,14 @@ public class Printer {
 
     public static void Studentenlijst() {
         String naam;
+        String achternaam;
         int studentennummer;
         System.out.printf("=================================\n");
         for (int  i = 0;  i < JSON.getStudentList().size();  i++) {
             naam = JSON.getStudentList().get(i).getNaam();
+            achternaam = JSON.getStudentList().get(i).getAchterNaam();
             studentennummer = JSON.getStudentList().get(i).getStudentNummer();
-            System.out.printf(ANSI_YELLOW + "Naam:%s\nStudentennummer:%d\n\n",naam ,studentennummer);
+            System.out.printf(ANSI_YELLOW + "Naam:%s %s\nStudentennummer:%d\n\n",naam, achternaam ,studentennummer);
         }
     }
 

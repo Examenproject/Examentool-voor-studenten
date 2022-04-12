@@ -26,6 +26,7 @@ public class Examen {
         //vraag alle data op en generate een vragen array.
         //pass null naar studentAntwoord
 
+        //genereer Vraag objecten met de JSON data
         for (Object vraagJson : vragenJsonArray) {
             JSONObject vraagObject = (JSONObject) vraagJson;
 

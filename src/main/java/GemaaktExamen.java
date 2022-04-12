@@ -23,7 +23,10 @@ public class GemaaktExamen {
     }
 
     private void getData(){
+        //vraag alle data op uit de JSON file
         JSONObject examenObject = JSON.getExamenAntwoorden(id);
+
+        //zet de waardes uit de JSON file gelijk aan de instance variabelen
         this.totaalVragen = JSON.toInt(examenObject.get("totaalVragen"));
         this.uniekExamenId = JSON.toInt(examenObject.get("examenID"));
         this.examenNaam = examenObject.get("naam").toString();
@@ -38,8 +41,10 @@ public class GemaaktExamen {
             this.geslaagd = false;
         }
 
+        //vraag alle gemaakte vragen op
         JSONArray vragenJsonArray = (JSONArray) examenObject.get("vragen");
 
+        //loop door alle gemaakte vragen en genereer een nieuw Vraag object
         for(Object vraagJson: vragenJsonArray){
             JSONObject vraagObject = (JSONObject) vraagJson;
 
@@ -55,7 +60,9 @@ public class GemaaktExamen {
     public void examenInzien(){
         Scanner scanner = new Scanner(System.in);
         int teller = 0;
+
         ArrayList<GemaaktExamen> examens = JSON.getGemaakteExamens(this.studentNummer);
+
         for(GemaaktExamen examen : examens){
             if(examen.getId() == id){
                 ArrayList<Vraag> vragen = examen.getVragen();

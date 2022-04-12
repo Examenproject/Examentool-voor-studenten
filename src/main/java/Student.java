@@ -54,22 +54,32 @@ public class Student {
         }
     }
 
-    public void meesteExamens() {
-        ArrayList<Student> studenten = JSON.getStudenten();
-        //sort names
-        Comparator<Student> comparator = Comparator.comparingInt(s -> s.getNaam().length());
-        studenten.sort(comparator);
-        Collections.reverse(studenten);
+    public static void controleerGeslaagdVoorExamen() {
+        Scanner scanner = new Scanner(System.in);
 
-
-        //final Sort
-        Comparator<Student> finalComparator = Comparator.comparingInt(Student::getGehaaldeExamens).thenComparingDouble(Student::getGemiddelde);
-        studenten.sort(finalComparator);
-        Collections.reverse(studenten);
-
-        for (Student student : studenten) {
-            System.out.printf("%s heeft %d examens gehaald met een gemiddelde van %.1f.\n", student.getNaam(), student.getGehaaldeExamens(), student.getGemiddelde());
+        System.out.println("Geef het studentnummer: ");
+        int sNummerInput = scanner.nextInt();
+        Student student = JSON.getStudent(sNummerInput);
+        if(student == null){
+            System.out.println("Deze student bestaat niet!");
+            return;
         }
+
+        System.out.println("Geef het examennummer: ");
+        Printer.Examenlijst();
+        int examenNummerInput = scanner.nextInt();
+
+        //loop door alle gemaakte examens van deze student
+        for(GemaaktExamen gE: JSON.getGemaakteExamens(student.getStudentNummer())){
+            if(gE.getUniekExamenId() == examenNummerInput){
+                if(gE.isGeslaagd()){
+                    System.out.printf("Student(%s) is geslaagd voor %s(%d)%n", student.getStudentNummer(), gE.getExamenNaam(), gE.getUniekExamenId());
+                    return;
+                }
+            }
+        }
+
+        System.out.printf("Student(%s) is niet geslaagd voor dit examen%n", student.getStudentNummer());
     }
 
     public static void gemaakteExamens() {
