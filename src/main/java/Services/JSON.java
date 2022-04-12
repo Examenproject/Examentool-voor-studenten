@@ -282,7 +282,6 @@ public class JSON {
         newExamen.put("poging", count);
         newExamen.put("cijfer", cijfer);
 
-
         //add the newly created json object to the whole list of exam answers
         examenAntwoorden.add(newExamen);
 
