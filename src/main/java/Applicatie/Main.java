@@ -1,7 +1,9 @@
+package Applicatie;
+
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import Services.*;
 public class Main {
 
     public static Student student;
@@ -90,3 +92,4 @@ public class Main {
         }
     }
 }
+

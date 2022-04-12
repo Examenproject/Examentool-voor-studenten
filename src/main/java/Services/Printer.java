@@ -1,8 +1,10 @@
+package Services;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import Applicatie.*;
 public class Printer {
-    
+
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
@@ -75,7 +77,7 @@ public class Printer {
 
     public static void Examenlijst() {
         System.out.printf("=================================\n"+"Examenlijst: \n"+"\n");
-        for (int  i = 0;  i < JSON.getExamList().size();  i++) {
+        for (int i = 0; i < JSON.getExamList().size(); i++) {
             String examen = JSON.getExamList().get(i).getNaam();
             System.out.printf("%d. %s\n", i + 1, examen);
         }
@@ -94,7 +96,7 @@ public class Printer {
         String achternaam;
         int studentennummer;
         System.out.printf("=================================\n");
-        for (int  i = 0;  i < JSON.getStudentList().size();  i++) {
+        for (int i = 0; i < JSON.getStudentList().size(); i++) {
             naam = JSON.getStudentList().get(i).getNaam();
             achternaam = JSON.getStudentList().get(i).getAchterNaam();
             studentennummer = JSON.getStudentList().get(i).getStudentNummer();
@@ -156,3 +158,4 @@ public class Printer {
         s.nextLine();
     }
 }
+

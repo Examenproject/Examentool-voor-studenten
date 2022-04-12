@@ -5,7 +5,8 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import Applicatie.*;
+import Services.*;
 public class TestClass {
 
     @Test

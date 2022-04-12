@@ -1,7 +1,9 @@
+package Applicatie;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+import Services.*;
 
 public class Student {
     private String naam;
@@ -11,7 +13,7 @@ public class Student {
     private double gemiddelde;
     public ArrayList<GemaaktExamen> examens = new ArrayList<>();
 
-    Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens, ArrayList<GemaaktExamen> examens, double gemiddelde) {
+    public Student(String naam, String achterNaam, int studentNummer, int gehaaldeExamens, ArrayList<GemaaktExamen> examens, double gemiddelde) {
         this.naam = naam;
         this.achterNaam = achterNaam;
         this.studentNummer = studentNummer;

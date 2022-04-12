@@ -1,5 +1,7 @@
-import java.util.Scanner;
+package Applicatie;
 
+import java.util.Scanner;
+import Services.*;
 public class Inloggen {
     static Scanner scanner = new Scanner(System.in);
 
@@ -36,4 +38,5 @@ public class Inloggen {
         return JSON.getStudent(studentNummer);
     }
 }
+
 

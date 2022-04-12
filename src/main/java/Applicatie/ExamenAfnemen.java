@@ -1,9 +1,11 @@
+package Applicatie;
 
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import Services.*;
 
 public class ExamenAfnemen {
     Scanner scanner = new Scanner(System.in);
@@ -86,3 +88,4 @@ public class ExamenAfnemen {
 
 
 }
+

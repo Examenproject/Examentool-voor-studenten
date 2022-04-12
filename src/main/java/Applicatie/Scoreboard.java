@@ -1,7 +1,9 @@
+package Applicatie;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
+import Services.*;
 public class Scoreboard {
     public void besteStudenten() {
         ArrayList<Student> studenten = JSON.getStudentList();

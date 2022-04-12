@@ -1,10 +1,12 @@
+package Applicatie;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-
+import Services.*;
 public class GemaaktExamen {
     private String examenNaam;
     private int uniekExamenId;// unieke examen id examens.json
@@ -17,7 +19,7 @@ public class GemaaktExamen {
     private boolean geslaagd;
     private ArrayList<Vraag> vragen = new ArrayList<>();
 
-    GemaaktExamen(int uniekGemaaktExamenId) {
+    public GemaaktExamen(int uniekGemaaktExamenId) {
         this.id = uniekGemaaktExamenId;
         getData();
     }
@@ -119,3 +121,4 @@ public class GemaaktExamen {
         return geslaagd;
     }
 }
+
