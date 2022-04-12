@@ -70,7 +70,7 @@ public class ExamenAfnemen {
 
     public void berekenCijfer(ArrayList<Vraag> vragenlijst, double goed) {
         // 9 * S / L +N = Cijfer
-        Double cijfer = 9.0 * goed / randomVragen.size() + 1.0;
+        Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
 
         //als de nieuwe gemaakt examen op
         int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst, cijfer);

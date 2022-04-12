@@ -7,6 +7,42 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestClass {
+
+    @Test
+    public void testBerekenCijfer(){
+        double goed;
+        double expected;
+        ArrayList<Integer> vragenlijst = new ArrayList<>(10);
+        for (int i = 0; i <= 3; i++) {
+            if (i == 0){
+                goed = 7;
+                expected = 7.3;
+                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
+                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+            }
+            else if (i == 1){
+                goed = 9;
+                expected = 9.1;
+                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
+                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+            }
+            else if (i == 2){
+                goed = 10;
+                expected = 10;
+                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
+                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+            }
+            else if(i == 3){
+                goed = 3;
+                expected = 3.7;
+                Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
+                Assert.assertEquals(java.util.Optional.of(expected), cijfer);
+            }
+
+        }
+
+    }
+
     @Test
     public void testStelVraag(){
         for(int i = 0; i<2; i++){
