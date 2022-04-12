@@ -47,7 +47,7 @@ public class JSON {
         }
     }
 
-    public static ArrayList<Student> getStudenten() {
+    /*public static ArrayList<Student> getStudenten() {
         JSONArray studenten = readFile("studenten");
         ArrayList<Student> lijstMetStudenten = new ArrayList<>();
         for (Object student : studenten) {
@@ -56,7 +56,7 @@ public class JSON {
             lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer"))), (double) jsonObject.get("gemiddelde")));
         }
         return lijstMetStudenten;
-    }
+    }*/
 
     //Get alle studenten die een examen hebben gemaakt. Als input geef je het unieke examenID uit examens.json
     public static ArrayList<Student> getStudenten(int examenId) {
