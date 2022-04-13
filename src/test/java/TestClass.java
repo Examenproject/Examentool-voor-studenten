@@ -9,6 +9,7 @@ import Applicatie.*;
 import Services.*;
 public class TestClass {
 
+    //test of het cijfer goed berekend wordt
     @Test
     public void testBerekenCijfer(){
         double goed;
@@ -45,6 +46,7 @@ public class TestClass {
 
     }
 
+    //kijkt of het stellen van een vraag en het checken van antwoorden goed gaat
     @Test
     public void testStelVraag(){
         for(int i = 0; i<2; i++){
@@ -80,6 +82,8 @@ public class TestClass {
             }
         }
     }
+
+    //kijkt of het inloggen van een student correct verloopt 
     @Test
     public void testInloggen(){
         for(int i = 0; i<4; i++){
