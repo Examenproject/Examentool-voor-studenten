@@ -51,7 +51,7 @@ public class Printer {
                 "2. Lijst met studenten\n" +
                 "3. Examen maken\n" +
                 "4. Examen inzien\n" +
-                "5. Beste studenten\n" +
+                "5. Leerlingen scoreboard\n" +
                 "6. Welke examens heeft een student gehaald\n" +
                 "7. Controleer of een student geslaagd is voor een examen\n" +
                 "8. Uitschrijven student\n" +
