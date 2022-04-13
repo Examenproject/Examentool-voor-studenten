@@ -86,6 +86,7 @@ public class Printer {
         for(GemaaktExamen gemaaktExamen : gemaaktExamens){
             System.out.println(ANSI_RED + "ID: " + gemaaktExamen.getId());
             System.out.println(ANSI_YELLOW + "Naam : " + gemaaktExamen.getExamenNaam());
+            System.out.println(ANSI_PURPLE + "Poging : " + gemaaktExamen.getPoging());
             System.out.println(ANSI_BLUE + "Datum : " + gemaaktExamen.getDate());
             System.out.println("============================");
         }

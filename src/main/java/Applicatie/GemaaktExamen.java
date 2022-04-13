@@ -105,10 +105,6 @@ public class GemaaktExamen {
         return poging;
     }
 
-    public int getStudentNummer() {
-        return studentNummer;
-    }
-
     public int getUniekExamenId() {
         return uniekExamenId;
     }

@@ -10,11 +10,11 @@ import Services.*;
 public class ExamenAfnemen {
     Scanner scanner = new Scanner(System.in);
     private ArrayList<Vraag> randomVragen;
-    int uniekExamenID;
-    int studentNummer;
+    private int uniekExamenID;
+    private int studentNummer;
 
     public ExamenAfnemen(Student student) {
-        studentNummer = student.getStudentNummer();
+        this.studentNummer = student.getStudentNummer();
     }
 
     public void maakExamen() {
@@ -22,7 +22,7 @@ public class ExamenAfnemen {
         Printer.Examenlijst();
         int input = scanner.nextInt();
 
-        uniekExamenID = input;
+        this.uniekExamenID = input;
         scanner.nextLine();
 
         //laat de gebruiker een examen kiezen
@@ -75,7 +75,7 @@ public class ExamenAfnemen {
         Double cijfer = 9.0 * goed / vragenlijst.size() + 1.0;
 
         //als de nieuwe gemaakt examen op
-        int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, vragenlijst, cijfer);
+        int gemaaktExamenID = JSON.saveGemaaktExamen(this.uniekExamenID, this.studentNummer, vragenlijst, cijfer);
 
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
 
@@ -83,7 +83,7 @@ public class ExamenAfnemen {
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
 
         //link all id's terug naar de student in de JSON file
-        JSON.updateStudent(studentNummer,gemaaktExamenID, uniekExamenID);
+        JSON.updateStudent(this.studentNummer,gemaaktExamenID, this.uniekExamenID);
     }
 
 
