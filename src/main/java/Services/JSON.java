@@ -49,36 +49,6 @@ public class JSON {
         }
     }
 
-    //Get alle studenten die een examen hebben gemaakt. Als input geef je het unieke examenID uit examens.json
-    public static ArrayList<Student> getStudenten(int examenId) {
-        JSONArray studenten = readFile("studenten"); // Roept methode readFile aan die de hele file met studenten teruggeeft als array.
-        ArrayList<Student> lijstMetStudenten = new ArrayList<>(); //In deze lijst met studenten worden alle studenten toegevoegd die een bepaald examen hebben gemaakt.
-
-        //Gaat alle studenten langs.
-        for (Object student : studenten) {
-
-            boolean isToegevoegd = false;
-
-            //Maak van het Object student een JSON Object
-            JSONObject jsonObject = (JSONObject) student;
-            JSONArray gemaakteExamens = (JSONArray) jsonObject.get("examens");
-
-            for (Object gemaakteExamenObject : gemaakteExamens) {
-                JSONObject gemaakteExamen = (JSONObject) (gemaakteExamenObject);
-
-                int examenNummer = toInt(gemaakteExamen.get("examenID"));
-
-                //Als het meegegeven examenId gelijk is aan een examenNummer in de array in de student, dan wordt deze student toegevoegd aan de ArrayList "lijstMetStudenten".
-                // Op deze manier krijg je in die ArrayList dus een overzicht van alle studenten die een bepaalde meegegeven toets hebben gemaakt.
-                if (examenNummer == examenId && !isToegevoegd) {
-                    isToegevoegd = true;
-                    lijstMetStudenten.add(new Student(jsonObject.get("naam").toString(), jsonObject.get("achternaam").toString(), toInt(jsonObject.get("nummer")), toInt(jsonObject.get("gehaaldeExamens")), getGemaakteExamens(toInt(jsonObject.get("nummer"))), (double) jsonObject.get("gemiddelde")));
-                }
-            }
-        }
-        return lijstMetStudenten;
-    }
-
     //returned alle gemaakte examens door een student. Geef als input het studentnummer uit de file studenten.json
     public static ArrayList<GemaaktExamen> getGemaakteExamens(int studentNummer) {
         JSONArray studenten = readFile("studenten");
