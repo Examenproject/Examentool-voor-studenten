@@ -35,7 +35,7 @@ public class Printer {
                 "=================================");
     }
 
-    public static void Hoofdmenu() {
+    public static void Hoofdmenu(Student student) {
         System.out.println("" + ANSI_GREEN +
                 "███████╗██╗░░██╗░█████╗░███╗░░░███╗███████╗███╗░░██╗████████╗░█████╗░░█████╗░██╗░░░░░\n" + ANSI_BLUE +
                 "██╔════╝╚██╗██╔╝██╔══██╗████╗░████║██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░\n" + ANSI_GREEN +
@@ -45,7 +45,7 @@ public class Printer {
                 "╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚════╝░░╚════╝░╚══════╝\n" +
                 "\n" + ANSI_RESET +
                 "=================================\n" + ANSI_PURPLE + "\n" +
-                "Hallo, maak een keuze:\n" +
+                "Hallo " + student.getNaam() + " " + student.getAchterNaam() + " ("+ student.getStudentNummer() + "), maak een keuze:\n" +
                 "\n" +
                 "1. Lijst met examens\n" +
                 "2. Lijst met studenten\n" +
@@ -59,9 +59,9 @@ public class Printer {
                 "\n" + ANSI_RESET +
                 "=================================");
     }
-    public static void simpelHoofdMenu(){
+    public static void simpelHoofdMenu(Student student){
         System.out.println(ANSI_CYAN + "=================================\n" +
-                "Hallo, maak een keuze:\n" +
+                "Hallo " + student.getNaam() + " " + student.getAchterNaam() + " ("+ student.getStudentNummer() + "), maak een keuze:\n" +
                 "\n" +
                 "1. Lijst met examens\n" +
                 "2. Lijst met studenten\n" +

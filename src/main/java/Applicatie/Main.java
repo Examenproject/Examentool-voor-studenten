@@ -29,11 +29,11 @@ public class Main {
 
         //print het hoofdmenu uit met alle opties
         int invoer = -1;
-        Printer.Hoofdmenu();
+        Printer.Hoofdmenu(student);
 
         while (invoer != 9) {
             if (invoer != -1) {
-                Printer.simpelHoofdMenu();
+                Printer.simpelHoofdMenu(student);
             }
 
             invoer = scanner.nextInt();
