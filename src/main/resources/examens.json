@@ -133,13 +133,13 @@
       },
       {
         "id": 3,
-        "vraag": "Wat is de hoofdstad van Estland?",
+        "vraag": "Wat is de hoofdstad van Estland?\nA. Tirana\n B. Tallinn \n C. Taiwan \n D. Tarawa",
         "antwoord": "B",
         "punten": 1
       },
       {
         "id": 4,
-        "vraag": "Van welk land is Valletta de hoofdstad?",
+        "vraag": "Van welk land is Valletta de hoofdstad?\n A. IJsland \n B. Malta \n C. Hongarije \n D. Roemenië",
         "antwoord": "B",
         "punten": 1
       },
@@ -157,7 +157,7 @@
       },
       {
         "id": 7,
-        "vraag": "Wat is de hoofdstad van Namibië?",
+        "vraag": "Wat is de hoofdstad van Namibië?\nA. Luanda\n B. Windroos\n C. Windzucht\n D. Windhoek",
         "antwoord": "D",
         "punten": 1
       },
@@ -211,7 +211,7 @@
       },
       {
         "id": 16,
-        "vraag": "Is Africa een land?",
+        "vraag": "Is Europa een land?",
         "antwoord": "Nee",
         "punten": 1
       },
