@@ -101,7 +101,7 @@ public class Printer {
             naam = JSON.getStudentList().get(i).getNaam();
             achternaam = JSON.getStudentList().get(i).getAchterNaam();
             studentennummer = JSON.getStudentList().get(i).getStudentNummer();
-            System.out.printf(ANSI_YELLOW + "Naam:%s %s\nStudentennummer:%d\n\n",naam, achternaam ,studentennummer);
+            System.out.printf(ANSI_YELLOW + "Naam: %s %s\nStudentennummer: %d\n\n",naam, achternaam ,studentennummer);
         }
     }
 
@@ -133,7 +133,7 @@ public class Printer {
     public static void Uitschrijven() {
         System.out.printf("=================================\n" +
                 ANSI_RED + "Voer uw wachtwoord in als u zich wilt uitschrijven\n" + ANSI_RESET +
-                "=================================");
+                "=================================\n");
     }
 
     public static void Vraag(String question, int index) {
@@ -150,7 +150,7 @@ public class Printer {
             gehaaldTekst = ANSI_RED + "niet" + ANSI_RESET;
         }
         System.out.printf("=================================\n" +
-                ANSI_GREEN + "examen %s gehaald met een  %.1f\n" + ANSI_RESET + "exit\n", gehaaldTekst, cijfer);
+                "examen %s gehaald met een %.1f\n" + ANSI_RESET, gehaaldTekst, cijfer);
     }
 
     public static void wachtOpGebruiker() {
