@@ -142,5 +142,365 @@
     "totaalVragen": 10,
     "naam": "Topo Examen",
     "studentNummer": 12345678
+  },
+  {
+    "date": "14\/04\/2022 20:27:53",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag1"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag2"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag3"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag4"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag5"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag6"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag7"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag8"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag9"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag10"
+      }
+    ],
+    "cijfer": 5.5,
+    "id": 65693400,
+    "examenID": 3,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  },
+  {
+    "date": "14\/04\/2022 20:28:16",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag1"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag2"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag3"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag4"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag5"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag6"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag7"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag8"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag9"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag10"
+      }
+    ],
+    "cijfer": 5.5,
+    "id": 67673414,
+    "examenID": 3,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  },
+  {
+    "date": "14\/04\/2022 20:29:01",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag1"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag2"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag3"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag4"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag5"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag6"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag7"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag8"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag9"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag10"
+      }
+    ],
+    "cijfer": 5.5,
+    "id": 91830470,
+    "examenID": 3,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  },
+  {
+    "date": "14\/04\/2022 20:30:28",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag1"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag2"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag3"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag4"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag5"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag6"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag7"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag8"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag9"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "ditisfout",
+        "punten": 1,
+        "vraag": "vraag10"
+      }
+    ],
+    "cijfer": 5.5,
+    "id": 31029415,
+    "examenID": 3,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  },
+  {
+    "date": "14\/04\/2022 20:58:58",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "vraag4"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "vraag8"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "vraag7"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "2",
+        "punten": 1,
+        "vraag": "vraag1"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag5"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag2"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag10"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "waar",
+        "punten": 1,
+        "vraag": "vraag6"
+      },
+      {
+        "antwoord": "waar",
+        "studentAntwoord": "niet",
+        "punten": 1,
+        "vraag": "vraag3"
+      },
+      {
+        "antwoord": "niet",
+        "studentAntwoord": "niet",
+        "punten": 1,
+        "vraag": "vraag9"
+      }
+    ],
+    "cijfer": 3.7,
+    "id": 76345973,
+    "examenID": 3,
+    "totaalVragen": 10,
+    "naam": "test Examen",
+    "studentNummer": 1234
   }
 ]

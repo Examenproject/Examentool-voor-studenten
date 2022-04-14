@@ -34,29 +34,21 @@ public class TestClass {
     //test of het cijfer goed berekend wordt
     @Test
     public void testBerekenCijfer(){
-        int uniekExamenID = 3;
-        int studentNummer = 12345678;
-        Examen examen = JSON.getExamenObject(3);
-        ArrayList<Vraag> examenVragen = examen.getVragen();
-        String antwoord = null;
-        double goed = 5;
-        double expected = 5.5;
-
+        GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(76345973);
+        ArrayList<Vraag> examenvragen = gemaaktExamen.getVragen();
+        double punt = 0;
+        //compare user antwoord met goed
         for (int i = 0; i < 10; i++) {
-
-            if (i < 6){
-                antwoord = "waar";
+            if (examenvragen.get(i).getStudentAntwoord().equalsIgnoreCase(examenvragen.get(i).getAntwoord())){
+                punt++;
             }
-            else{
-                antwoord = "ditisfout";
-            }
-            examenVragen.get(i).setStudentAntwoord(antwoord);
         }
 
-        int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, examenVragen, 5.5);
-        GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
+        Assert.assertEquals(punt/10*9+1, gemaaktExamen.getCijfer(), 0.0001);
 
     }
+
+
 
 
     //Controleer of het checken van antwoorden goed gaat. Hierbij testen we een goed antwoord en een fout antwoord.
