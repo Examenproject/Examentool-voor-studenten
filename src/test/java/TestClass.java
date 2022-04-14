@@ -127,4 +127,22 @@ public class TestClass {
             }
         }
     }
+    
+    @Test
+    public void testGeslaagd(){
+        GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(76345973);
+        ArrayList<Vraag> examenVragen = gemaaktExamen.getVragen();
+        double punten = 0;
+        for(int i=0; i< examenVragen.size(); i++){
+            if(examenVragen.get(i).getStudentAntwoord().equalsIgnoreCase(examenVragen.get(i).getAntwoord())){
+                punten++;
+            }
+        }
+        double cijfer = punten/ examenVragen.size()*9+1;
+        boolean geslaagd = false;
+        if(cijfer >= 5.5){
+            geslaagd=true;
+        }
+        Assert.assertEquals(geslaagd, gemaaktExamen.isGeslaagd());
+    }
 }
