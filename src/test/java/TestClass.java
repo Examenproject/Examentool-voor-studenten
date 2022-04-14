@@ -46,7 +46,7 @@ public class TestClass {
 
     }
 
-    //kijkt of het stellen van een vraag en het checken van antwoorden goed gaat
+    //Controleer of het checken van antwoorden goed gaat. Hierbij testen we een goed antwoord en een fout antwoord.
     @Test
     public void testStelVraag(){
         for(int i = 0; i<2; i++){
@@ -83,7 +83,8 @@ public class TestClass {
         }
     }
 
-    //kijkt of het inloggen van een student correct verloopt 
+    //Controleert of het inloggen van een student correct verloopt.
+    //Hierbij testen we verschillende combinaties van goede en foute studentnummers en wachtwoorden.
     @Test
     public void testInloggen(){
         for(int i = 0; i<4; i++){
