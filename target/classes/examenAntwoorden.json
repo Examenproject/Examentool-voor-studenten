@@ -1,1 +1,146 @@
-[{"date":"08\/04\/2022 10:52:09","poging":0,"vragen":[{"antwoord":"21546 baby blue-phones","studentAntwoord":"1","punten":1,"vraag":"Er zijn in 2015 34200 Baby Blue phones verkocht. 63% daarvan waren blauw. hoeveel blauwe baby blue phones zijn er verkocht?\n"},{"antwoord":"19162,50 euro","studentAntwoord":"1","punten":1,"vraag":"Hector is 10 jaar gestopt met roken. Hij rookte in het verleden 15 sigaretten op een dag. In een pak sigaretten zitten 20 sigaretten. Een pak kost 7 euro. Hoeveel geld heeft Hector bespaard in de afgelopen 10 jaar door te stoppen met roken?"},{"antwoord":"50 kratten appels","studentAntwoord":"1","punten":1,"vraag":"Walter wilt graag zijn appels in kratten vullen van 20 kilo. Hoeveel kratten appels zou Walter kunnen vullen met 1 ton appels?\n"},{"antwoord":"303,67 euro","studentAntwoord":"1","punten":1,"vraag":"Mike moet voor zijn auto-verzekering 321 euro betalen. De prijs is door inflatie met 5,4% gestegen sinds het afgelopen jaar. Hoeveel betaalde Mike in het afgelopen jaar voor zijn auto-verzekering?\n"},{"antwoord":"A. 49","studentAntwoord":"1","punten":1,"vraag":"wat is 7 - 7 x 7 + 7?\nA. 49\n B. 32\n C. 41\n D. 321"},{"antwoord":"31 pakjes rozijnen","studentAntwoord":"1","punten":1,"vraag":"Karel heeft een kilo rozijnen(1000 gram). Hij wilt de rozijnen inpakken in kleine pakjes van 32 gram. Hoeveel pakjes rozijnen kan Karel vullen?\n"},{"antwoord":"C. 9","studentAntwoord":"1","punten":1,"vraag":"Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12"},{"antwoord":"240 euro","studentAntwoord":"1","punten":1,"vraag":"Saul wilt graag benzine tanken. Hij tankt 60 liter benzine voor 4 euro per liter. Hoeveel moet hij betalen?"},{"antwoord":"8","studentAntwoord":"1","punten":1,"vraag":"Jesse wilt graag 64 watermeloenen kopen en deze met 8 vrienden delen. Hoeveel watermeloenen krijgt elke vriend?\n"},{"antwoord":"A. 3,52\u20AC","studentAntwoord":"1","punten":1,"vraag":"Een halve kilo jonge kaas kost in de winkel 4,00\u20AC. Voor ieder gat in de kaas weegt de kaas 5 gram minder. Hoeveel kost een kaas met 12 gaten?\nA. 3,52\u20AC\n B. 3,72\u20AC\n C. 4,48\u20AC\nD. 5,32\u20AC\n"}],"cijfer":1.0,"id":45247275,"examenID":1,"totaalVragen":10,"naam":"Reken Examen","studentNummer":12345678},{"date":"08\/04\/2022 14:47:56","poging":1,"vragen":[{"antwoord":"B","studentAntwoord":"d","punten":1,"vraag":"Wat is de hoofdstad van Estland?\n"},{"antwoord":"Hoofdstad","studentAntwoord":"a","punten":1,"vraag":"Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?\n"},{"antwoord":"B","studentAntwoord":"w","punten":1,"vraag":"Van welk land is Valetta de hoofdstad?\n"},{"antwoord":"D","studentAntwoord":"f","punten":1,"vraag":"Wat is de hoofdstad van Namibië?\n"},{"antwoord":"C","studentAntwoord":"g","punten":1,"vraag":"Als je de continenten rangschikt van grootste naar kleinste oppervlakte. Welke van deze volgordes klopt dan?\nA. Azië, Afrika, Antarctica, Noord Amerika, Zuid-Amerika, Europa, Australië\nB Azië, Afrika, Zuid-Amerika, Noord Amerika, Antarctica, Australië, Europa\nC Azië, Afrika, Noord Amerika, Zuid-Amerika, Antarctica, Europa, AustraliëD Afrika, Azië, Zuid-Amerika, Antarctica, Noord Amerika,  Europa, Australië\n"},{"antwoord":"Ja","studentAntwoord":"r","punten":1,"vraag":"De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee\n"},{"antwoord":"Accra","studentAntwoord":"e","punten":1,"vraag":"Wat is de hoofdstad van Ghana?\n"},{"antwoord":"Siam","studentAntwoord":"a","punten":1,"vraag":"Hoe werd Thailand tot 1939 genoemd?\n"},{"antwoord":"Tunesië","studentAntwoord":"w","punten":1,"vraag":"In welk land ligt het meest noordelijke punt van Afrika?\n"},{"antwoord":"A","studentAntwoord":"d","punten":1,"vraag":"Zuid-Afrika is het enige land ter wereld met 3 hoofdsteden. Welke zijn dat?\nA. Pretoria, Kaapstad, Bloemfontein\nB. Johannesburg, Kaapstad, Bloemfontein\nC. Pretoria, Kaapstad, Johannesburg\nD. Mbombela, Kaapstad, Johannesburg\n"}],"cijfer":1.0,"id":98137419,"examenID":2,"totaalVragen":10,"naam":"Topo Examen","studentNummer":12345678}]
+[
+  {
+    "date": "08\/04\/2022 10:52:09",
+    "poging": 0,
+    "vragen": [
+      {
+        "antwoord": "21546 baby blue-phones",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Er zijn in 2015 34200 Baby Blue phones verkocht. 63% daarvan waren blauw. hoeveel blauwe baby blue phones zijn er verkocht?\n"
+      },
+      {
+        "antwoord": "19162,50 euro",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Hector is 10 jaar gestopt met roken. Hij rookte in het verleden 15 sigaretten op een dag. In een pak sigaretten zitten 20 sigaretten. Een pak kost 7 euro. Hoeveel geld heeft Hector bespaard in de afgelopen 10 jaar door te stoppen met roken?"
+      },
+      {
+        "antwoord": "50 kratten appels",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Walter wilt graag zijn appels in kratten vullen van 20 kilo. Hoeveel kratten appels zou Walter kunnen vullen met 1 ton appels?\n"
+      },
+      {
+        "antwoord": "303,67 euro",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Mike moet voor zijn auto-verzekering 321 euro betalen. De prijs is door inflatie met 5,4% gestegen sinds het afgelopen jaar. Hoeveel betaalde Mike in het afgelopen jaar voor zijn auto-verzekering?\n"
+      },
+      {
+        "antwoord": "A. 49",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "wat is 7 - 7 x 7 + 7?\nA. 49\n B. 32\n C. 41\n D. 321"
+      },
+      {
+        "antwoord": "31 pakjes rozijnen",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Karel heeft een kilo rozijnen(1000 gram). Hij wilt de rozijnen inpakken in kleine pakjes van 32 gram. Hoeveel pakjes rozijnen kan Karel vullen?\n"
+      },
+      {
+        "antwoord": "C. 9",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Wat is 3 + 3!\nA. 6\n B. 4\nC. 9\n D. 12"
+      },
+      {
+        "antwoord": "240 euro",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Saul wilt graag benzine tanken. Hij tankt 60 liter benzine voor 4 euro per liter. Hoeveel moet hij betalen?"
+      },
+      {
+        "antwoord": "8",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Jesse wilt graag 64 watermeloenen kopen en deze met 8 vrienden delen. Hoeveel watermeloenen krijgt elke vriend?\n"
+      },
+      {
+        "antwoord": "A. 3,52\u20AC",
+        "studentAntwoord": "1",
+        "punten": 1,
+        "vraag": "Een halve kilo jonge kaas kost in de winkel 4,00\u20AC. Voor ieder gat in de kaas weegt de kaas 5 gram minder. Hoeveel kost een kaas met 12 gaten?\nA. 3,52\u20AC\n B. 3,72\u20AC\n C. 4,48\u20AC\nD. 5,32\u20AC\n"
+      }
+    ],
+    "cijfer": 1.0,
+    "id": 45247275,
+    "examenID": 1,
+    "totaalVragen": 10,
+    "naam": "Reken Examen",
+    "studentNummer": 12345678
+  },
+  {
+    "date": "08\/04\/2022 14:47:56",
+    "poging": 1,
+    "vragen": [
+      {
+        "antwoord": "B",
+        "studentAntwoord": "d",
+        "punten": 1,
+        "vraag": "Wat is de hoofdstad van Estland?\n"
+      },
+      {
+        "antwoord": "Hoofdstad",
+        "studentAntwoord": "a",
+        "punten": 1,
+        "vraag": "Wat betekent het Koreaanse woord 'Seoul' in het Nederlands?\n"
+      },
+      {
+        "antwoord": "B",
+        "studentAntwoord": "w",
+        "punten": 1,
+        "vraag": "Van welk land is Valetta de hoofdstad?\n"
+      },
+      {
+        "antwoord": "D",
+        "studentAntwoord": "f",
+        "punten": 1,
+        "vraag": "Wat is de hoofdstad van Namibië?\n"
+      },
+      {
+        "antwoord": "C",
+        "studentAntwoord": "g",
+        "punten": 1,
+        "vraag": "Als je de continenten rangschikt van grootste naar kleinste oppervlakte. Welke van deze volgordes klopt dan?\nA. Azië, Afrika, Antarctica, Noord Amerika, Zuid-Amerika, Europa, Australië\nB Azië, Afrika, Zuid-Amerika, Noord Amerika, Antarctica, Australië, Europa\nC Azië, Afrika, Noord Amerika, Zuid-Amerika, Antarctica, Europa, AustraliëD Afrika, Azië, Zuid-Amerika, Antarctica, Noord Amerika,  Europa, Australië\n"
+      },
+      {
+        "antwoord": "Ja",
+        "studentAntwoord": "r",
+        "punten": 1,
+        "vraag": "De Rohingya uit Myanmar wordt vaak de 'meest vervolgde minderheid' ter wereld genoemd\nJa\nNee\n"
+      },
+      {
+        "antwoord": "Accra",
+        "studentAntwoord": "e",
+        "punten": 1,
+        "vraag": "Wat is de hoofdstad van Ghana?\n"
+      },
+      {
+        "antwoord": "Siam",
+        "studentAntwoord": "a",
+        "punten": 1,
+        "vraag": "Hoe werd Thailand tot 1939 genoemd?\n"
+      },
+      {
+        "antwoord": "Tunesië",
+        "studentAntwoord": "w",
+        "punten": 1,
+        "vraag": "In welk land ligt het meest noordelijke punt van Afrika?\n"
+      },
+      {
+        "antwoord": "A",
+        "studentAntwoord": "d",
+        "punten": 1,
+        "vraag": "Zuid-Afrika is het enige land ter wereld met 3 hoofdsteden. Welke zijn dat?\nA. Pretoria, Kaapstad, Bloemfontein\nB. Johannesburg, Kaapstad, Bloemfontein\nC. Pretoria, Kaapstad, Johannesburg\nD. Mbombela, Kaapstad, Johannesburg\n"
+      }
+    ],
+    "cijfer": 1.0,
+    "id": 98137419,
+    "examenID": 2,
+    "totaalVragen": 10,
+    "naam": "Topo Examen",
+    "studentNummer": 12345678
+  }
+]

@@ -78,7 +78,6 @@ public class ExamenAfnemen {
         int gemaaktExamenID = JSON.saveGemaaktExamen(this.uniekExamenID, this.studentNummer, vragenlijst, cijfer);
 
         GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
-
         //laat de gebruiker zien of hij geslaagd is en print het cijfer uit
         Printer.Gehaald(gemaaktExamen.isGeslaagd(), cijfer);
 

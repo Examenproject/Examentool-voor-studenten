@@ -9,42 +9,55 @@ import Applicatie.*;
 import Services.*;
 public class TestClass {
 
+    @Test
+    public void testStudentNaam() {
+        String expected = "Karel";
+        String actual = JSON.getStudent(12345678).getNaam();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testStudentNummer() {
+        int expected = 12345678;
+        int actual = JSON.getStudent(12345678).getStudentNummer();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGemiddelde() {
+        double expected = 1.0;
+        double actual = JSON.getStudent(12345678).getGemiddelde();
+        Assert.assertEquals(expected, actual, 0.0001);
+    }
+
+
     //test of het cijfer goed berekend wordt
     @Test
     public void testBerekenCijfer(){
-        double goed;
-        double expected;
-        Integer[] vragenlijst = new Integer[10];
-        for (int i = 0; i <= 3; i++) {
-            if (i == 0){
-                goed = 7;
-                expected = 7.3;
-                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
+        int uniekExamenID = 3;
+        int studentNummer = 12345678;
+        Examen examen = JSON.getExamenObject(3);
+        ArrayList<Vraag> examenVragen = examen.getVragen();
+        String antwoord = null;
+        double goed = 5;
+        double expected = 5.5;
 
-                Assert.assertEquals(expected, cijfer,0.0001);
-            }
-            else if (i == 1){
-                goed = 9;
-                expected = 9.1;
-                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
-                Assert.assertEquals(expected, cijfer,0.0001);
-            }
-            else if (i == 2){
-                goed = 10;
-                expected = 10;
-                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
-                Assert.assertEquals(expected, cijfer,0.0001);
-            }
-            else if(i == 3){
-                goed = 3;
-                expected = 3.7;
-                Double cijfer = 9.0 * goed / vragenlijst.length + 1.0;
-                Assert.assertEquals(expected, cijfer,0.0001);
-            }
+        for (int i = 0; i < 10; i++) {
 
+            if (i < 6){
+                antwoord = "waar";
+            }
+            else{
+                antwoord = "ditisfout";
+            }
+            examenVragen.get(i).setStudentAntwoord(antwoord);
         }
 
+        int gemaaktExamenID = JSON.saveGemaaktExamen(uniekExamenID, studentNummer, examenVragen, 5.5);
+        GemaaktExamen gemaaktExamen = JSON.getExamenAntwoordenObject(gemaaktExamenID);
+
     }
+
 
     //Controleer of het checken van antwoorden goed gaat. Hierbij testen we een goed antwoord en een fout antwoord.
     @Test
@@ -121,11 +134,5 @@ public class TestClass {
                 Assert.assertFalse(isIngelogd);
             }
         }
-    }
-
-
-    @Test
-    public void testAanmelden(){
-
     }
 }

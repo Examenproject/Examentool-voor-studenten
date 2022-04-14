@@ -42,14 +42,13 @@ public class Student {
         return examens;
     }
 
-    public double getGemiddelde() {
-        return gemiddelde;
+    public double getGemiddelde(){
+            return gemiddelde;
     }
 
     public void gemaaktExamen() {
         ArrayList<GemaaktExamen> gemaaktExamen = JSON.getGemaakteExamens(studentNummer);
         for (GemaaktExamen gemaaktExamen1 : gemaaktExamen) {
-
             if (gemaaktExamen1.isGeslaagd()) {
                 System.out.printf("%s is gehaald met het cijfer : %.1f.\n", gemaaktExamen1.getExamenNaam(), gemaaktExamen1.getCijfer());
             }
